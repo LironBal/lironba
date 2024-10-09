@@ -10,63 +10,61 @@
             margin: 0;
             padding: 0;
             direction: rtl;
-            background: linear-gradient(135deg, #e0f7fa, #f0f7f9); /* גרדיאנט לרקע */
+            background-color: #e0f7fa;
             color: #333;
             overflow-x: hidden;
-            animation: fadeIn 1s ease-in-out;
         }
 
+        /* עיצוב הכותרת והאנימציה שלה */
         header {
-            background: linear-gradient(90deg, #00796b, #00c2cb); /* גרדיאנט בכותרת */
+            background-color: #00796b;
             color: white;
-            padding: 60px 0;
+            padding: 40px 0;
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: bold;
             letter-spacing: 3px;
+            animation: fadeIn 1s ease-in-out;
             position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* כותרת בצורה גיאומטרית */
         }
 
-        .new-logo {
-            max-width: 220px;
-            margin: 20px auto;
-            animation: fadeInDown 1s ease-in-out;
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
         }
 
+        /* תפריט ניווט */
         nav {
             background-color: #004d40;
-            padding: 15px;
+            padding: 10px;
             text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.3em;
-            padding: 10px 20px;
-            border-radius: 30px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #00c2cb;
-            transform: translateY(-5px); /* אנימציה של ריחוף */
+            color: #80cbc4;
         }
 
+        /* עיצוב ה"שירותים" עם אפקטים */
         section {
-            padding: 60px;
+            padding: 40px;
             text-align: center;
         }
 
         .service {
-            background: #ffffff;
+            background-color: #ffffff;
             margin: 20px auto;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 10px;
             max-width: 600px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -74,36 +72,62 @@
 
         .service:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service:before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: #00796b;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
         }
 
         h2 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            color: #00796b;
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #004d40;
         }
 
         p {
             font-size: 1.2em;
-            line-height: 1.8;
-            color: #555;
+            line-height: 1.6;
         }
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            margin-top: 20px;
-            background-color: #00c2cb;
+        .about, .contact {
+            background-color: #ffffff;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .contact a {
+            color: #00796b;
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        .whatsapp {
+            background-color: #25d366;
             color: white;
+            padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
         }
 
-        .btn:hover {
-            background-color: #00796b;
-            transform: translateY(-5px); /* כפתור "קופץ" מעט בהנפת עכבר */
+        .whatsapp:hover {
+            background-color: #128c7e;
         }
 
         footer {
@@ -112,26 +136,34 @@
             padding: 20px;
             text-align: center;
             font-size: 0.9em;
-            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%); /* עיצוב גיאומטרי לפוטר */
         }
 
         @keyframes fadeIn {
-            0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
-        @keyframes fadeInDown {
-            0% { opacity: 0; transform: translateY(-50px); }
-            100% { opacity: 1; transform: translateY(0); }
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
-
     </style>
 </head>
 <body>
 
 <header>
-    <img src="/mnt/data/לוגו  שקוף - אבי בלאיש.png" alt="לוגו אבי בלאיש" class="new-logo">
-    אבי בלאיש - סוכן ביטוח ופיננסים
+    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש" class="logo">
+    אבי בלאיש - סוכן ביטוח
 </header>
 
 <nav>
@@ -146,16 +178,37 @@
 </nav>
 
 <section>
-    <div class="service">
+    <div id="financial" class="service">
         <h2>ביטוח פיננסי</h2>
-        <p>הגנה על הנכסים הפיננסיים שלך עם פוליסות מותאמות אישית לצרכים הכלכליים שלך.</p>
-        <a href="#contact" class="btn">למידע נוסף</a>
+        <p>ניהול נכון של הנכסים הפיננסיים שלך יכול לשפר את העתיד שלך ושל משפחתך. אנו מציעים פתרונות פיננסיים מותאמים אישית לצרכים שלך, כך שתוכל לנהל את ההשקעות שלך ולתכנן את הפנסיה בצורה אופטימלית.</p>
     </div>
-</section>
 
-<footer>
-    כל הזכויות שמורות © אבי בלאיש
-</footer>
+    <div id="pension" class="service">
+        <h2>ביטוח פנסיוני</h2>
+        <p>הבטח את העתיד שלך עם ביטוח פנסיוני מותאם אישית לצרכים שלך. עם פתרונות המאפשרים לך לתכנן את הפנסיה בצורה מאובטחת, תוכל ליהנות מהבטחון הכלכלי שאתה זקוק לו לאחר הפרישה.</p>
+    </div>
 
-</body>
-</html>
+    <div id="health" class="service">
+        <h2>ביטוח בריאות</h2>
+        <p>בריאותך חשובה לנו. אנו מציעים ביטוחי בריאות מותאמים אישית שיכסו אותך בכל מצב רפואי, עם כיסויים מותאמים למצבך הבריאותי ולצרכים האישיים שלך.</p>
+    </div>
+
+    <div id="life" class="service">
+        <h2>ביטוח חיים</h2>
+        <p>דאג לעתיד המשפחה שלך עם ביטוח חיים שמעניק ביטחון ושקט נפשי עבורך ועבור יקיריך. פתרונותינו יבטיחו שאתה תשאיר אחריך עזבון כלכלי שישמור על רווחת משפחתך.</p>
+    </div>
+
+    <div id="critical" class="service">
+        <h2>מחלות קשות</h2>
+        <p>אנו מבינים שמחלות קשות יכולות להוות אתגר משמעותי. לכן, אנו מציעים כיסויים רחבים המעניקים לך תמיכה כלכלית והגנה במקרה של מחלה קשה, כדי שתוכל להתרכז בטיפול בעצמך ובבריאותך.</p>
+    </div>
+
+    <div id="travel" class="service">
+        <h2>ביטוח חו"ל</h2>
+        <p>תכנן את חופשותיך בראש שקט עם ביטוח חו"ל שלנו. כיסוי כולל למקרי חירום רפואיים, תאונות ובעיות אחרות במהלך השהות בחו"ל, כך שתוכל ליהנות מהנסיעות שלך ללא דאגות.</p>
+        <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//5af09ed3-3578-467a-978b-e1e6cc52243e.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" width="250" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
+
+    <div id="about" class="about">
+        <h2>אודות</h2>
+        <p>אבי בלאיש הוא סוכן ביטוח עם ניסיון של 35 שנה
