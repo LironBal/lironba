@@ -1,214 +1,29 @@
-<!DOCTYPE html>
-<html lang="he">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אבי בלאיש - סוכן ביטוח</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-            background-color: #e0f7fa;
-            color: #333;
-            overflow-x: hidden;
-        }
+<div id="about" class="about">
+    <h2>אודות</h2>
+    <p>אנו מציעים לכם יותר מ-35 שנות ניסיון בשירות מסור, אמין ומקצועי, ורואים בעבודתנו שליחות אמיתית. אנו מתמחים ביצירת פתרונות ביטוחיים ופיננסיים מותאמים אישית לצרכים הייחודיים שלכם ושל בני המשפחה, תוך ליווי צמוד לאורך כל הדרך. במבט לעתיד וליציבות הכלכלית, אנו כאן כדי לדאוג לביטחון שלכם ושל המעגלים המשפחתיים הקרובים, כך שתוכלו להתמודד עם כל אתגר שיבוא בראש שקט וביטחון מלא.</p>
 
-        /* עיצוב הכותרת והאנימציה שלה */
-        header {
-            background-color: #00796b;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-            font-size: 2.2em;
-            font-weight: bold;
-            letter-spacing: 3px;
-            animation: fadeIn 1s ease-in-out;
-            position: relative;
-        }
+    <p>הביטוח והפיננסים הם חלק חשוב מהעתיד שלך. אנו כאן כדי לעזור לכם למצוא את הפתרון המדויק, בין אם אתם עצמאים, שכירים, רווקים או נשואים. אנו מתאימים את הביטוחים ואת התוכניות הפיננסיות לצרכים האישיים שלכם ומספקים פתרונות שמבטיחים לכם עתיד בטוח ומוצלח.</p>
 
-        .logo {
-            max-width: 150px;
-            margin-bottom: 20px;
-        }
+    <p>נמאס לך לשלם על ביטוחים שלא באמת מתאימים לך? העתיד שלך חשוב, והוא חייב להיות מוגן כמו שצריך. אנחנו כאן כדי לעזור לך למצוא את הכיסוי הביטוחי שמבין את הצרכים האישיים שלך ונוודא שיש לך את הפתרון המדויק ביותר עבורך, כדי שתוכל להרגיש בטוח ורגוע בכל מצב.</p>
 
-        /* תפריט ניווט */
-        nav {
-            background-color: #004d40;
-            padding: 10px;
-            text-align: center;
-        }
+    <p>מתמחים במגוון רחב של פתרונות ביטוחים ופיננסיים המותאמים אישית לצרכים שלך:</p>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
-        }
+    <p><strong>פנסיה ופתרונות פיננסיים:</strong> תכנון עתיד פיננסי יציב עם תוכניות חסכון ופנסיה שמותאמות אישית לצרכים שלך, כדי להבטיח עתיד כלכלי בטוח.</p>
 
-        nav a:hover {
-            color: #80cbc4;
-        }
+    <p><strong>בריאות:</strong> הבריאות שלך היא הנכס החשוב ביותר. תוכלו לקבל כיסוי רחב למקרים רפואיים לא צפויים, ניתוחים פרטיים, תרופות מחוץ לסל ועוד. אנו מבינים שכל אחד זקוק לפתרון שונה, ולכן אנו מתאימים את הביטוח הבריאותי הנכון עבורכם, כך שתוכלו לקבל את הטיפול המיטבי, כשזה חשוב באמת.</p>
 
-        /* עיצוב ה"שירותים" עם אפקטים */
-        section {
-            padding: 40px;
-            text-align: center;
-        }
+    <p><strong>מחלות קשות:</strong> כיסוי שמעניק פיצוי כספי חד פעמי במקרה של מחלה קשה. הכסף יאפשר להתמקד בהחלמה, ללא דאגות כלכליות, ויבטיח לכם שקט נפשי גם במצבים המאתגרים ביותר.</p>
 
-        .service {
-            background-color: #ffffff;
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
+    <p><strong>ביטוח חיים:</strong> דואגים לעתיד המשפחה שלך עם כיסוי ביטוחי המעניק רשת ביטחון כלכלית במקרה של אירוע לא צפוי.</p>
 
-        .service:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+    <p><strong>נסיעות לחו"ל:</strong> חשוב שתהיו מכוסים לכל מקרה בלתי צפוי. כך תוכלו לקבל כיסוי מקיף להוצאות רפואיות דחופות, אשפוזים, פינוי חירום, טיפולים רפואיים. וקדימה, המטוס ממריא.. טסים בראש שקט, בידיעה שאתם מוגנים על ידי הביטוח המתאים לכם, בכל מקום בעולם.</p>
 
-        .service:before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 150px;
-            height: 150px;
-            background-color: #00796b;
-            border-radius: 50%;
-            opacity: 0.1;
-            z-index: 0;
-        }
+    <p><strong>ליצירת קשר ולקביעת פגישה:</strong></p>
+    <p>אבי בלאיש – סוכן ביטוח, פיננסים ואלמנטרי מטעם משרד האוצר. חבר לשכת סוכני הביטוח בישראל.<br>
+    טל: 050-5212281<br>
+    מייל: <a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
 
-        h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-            color: #004d40;
-        }
-
-        p {
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
-
-        .about, .contact {
-            background-color: #ffffff;
-            padding: 30px;
-            margin: 30px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            animation: slideIn 1s ease-in-out;
-        }
-
-        .contact a {
-            color: #00796b;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-
-        .whatsapp {
-            background-color: #25d366;
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-block;
-            margin: 20px 0;
-            font-size: 1.2em;
-            transition: background-color 0.3s ease;
-        }
-
-        .whatsapp:hover {
-            background-color: #128c7e;
-        }
-
-        footer {
-            background-color: #004d40;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            font-size: 0.9em;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes slideIn {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<header>
-    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש" class="logo">
-    אבי בלאיש - סוכן ביטוח
-</header>
-
-<nav>
-    <a href="#financial">ביטוח פיננסי</a>
-    <a href="#pension">ביטוח פנסיוני</a>
-    <a href="#health">ביטוח בריאות</a>
-    <a href="#life">ביטוח חיים</a>
-    <a href="#critical">מחלות קשות</a>
-    <a href="#travel">ביטוח חו"ל</a>
-    <a href="#about">אודות</a>
-    <a href="#contact">צור קשר</a>
-</nav>
-
-<section>
-    <div id="financial" class="service">
-        <h2>ביטוח פיננסי</h2>
-        <p>ניהול נכון של הנכסים הפיננסיים שלך יכול לשפר את העתיד שלך ושל משפחתך. אנו מציעים פתרונות פיננסיים מותאמים אישית לצרכים שלך, כך שתוכל לנהל את ההשקעות שלך ולתכנן את הפנסיה בצורה אופטימלית.</p>
-    </div>
-
-    <div id="pension" class="service">
-        <h2>ביטוח פנסיוני</h2>
-        <p>הבטח את העתיד שלך עם ביטוח פנסיוני מותאם אישית לצרכים שלך. עם פתרונות המאפשרים לך לתכנן את הפנסיה בצורה מאובטחת, תוכל ליהנות מהבטחון הכלכלי שאתה זקוק לו לאחר הפרישה.</p>
-    </div>
-
-    <div id="health" class="service">
-        <h2>ביטוח בריאות</h2>
-        <p>בריאותך חשובה לנו. אנו מציעים ביטוחי בריאות מותאמים אישית שיכסו אותך בכל מצב רפואי, עם כיסויים מותאמים למצבך הבריאותי ולצרכים האישיים שלך.</p>
-    </div>
-
-    <div id="life" class="service">
-        <h2>ביטוח חיים</h2>
-        <p>דאג לעתיד המשפחה שלך עם ביטוח חיים שמעניק ביטחון ושקט נפשי עבורך ועבור יקיריך. פתרונותינו יבטיחו שאתה תשאיר אחריך עזבון כלכלי שישמור על רווחת משפחתך.</p>
-    </div>
-
-    <div id="critical" class="service">
-        <h2>מחלות קשות</h2>
-        <p>אנו מבינים שמחלות קשות יכולות להוות אתגר משמעותי. לכן, אנו מציעים כיסויים רחבים המעניקים לך תמיכה כלכלית והגנה במקרה של מחלה קשה, כדי שתוכל להתרכז בטיפול בעצמך ובבריאותך.</p>
-    </div>
-
-    <div id="travel" class="service">
-        <h2>ביטוח חו"ל</h2>
-        <p>תכנן את חופשותיך בראש שקט עם ביטוח חו"ל שלנו. כיסוי כולל למקרי חירום רפואיים, תאונות ובעיות אחרות במהלך השהות בחו"ל, כך שתוכל ליהנות מהנסיעות שלך ללא דאגות.</p>
-        <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//5af09ed3-3578-467a-978b-e1e6cc52243e.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" width="250" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    </div>
-
-    <div id="about" class="about">
-        <h2>אודות</h2>
-        <p>אבי בלאיש הוא סוכן ביטוח עם ניסיון של 35 שנה
+    <p>לירון בלאיש – סוכן ביטוח ופיננסיים מטעם משרד האוצר.<br>
+    טל: 050-2835069<br>
+    מייל: <a href="mailto:liron@balaish.com">liron@balaish.com</a></p>
+</div>
