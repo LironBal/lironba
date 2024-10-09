@@ -10,63 +10,64 @@
             margin: 0;
             padding: 0;
             direction: rtl;
-            background: linear-gradient(135deg, #e0f7fa, #f0f7f9); /* גרדיאנט לרקע */
-            color: #333;
+            background-color: #f0f7f9; /* רקע בהיר בהשראת צבעי הטורקיז */
+            color: #333; /* צבע טקסט כהה לקריאה נוחה */
             overflow-x: hidden;
-            animation: fadeIn 1s ease-in-out;
         }
 
         header {
-            background: linear-gradient(90deg, #00796b, #00c2cb); /* גרדיאנט בכותרת */
+            background-color: #00c2cb; /* טורקיז בהיר */
             color: white;
-            padding: 60px 0;
+            padding: 40px 0;
             text-align: center;
-            font-size: 2.5em;
+            font-size: 2.2em;
             font-weight: bold;
             letter-spacing: 3px;
+            animation: fadeIn 1s ease-in-out;
             position: relative;
-            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* כותרת בצורה גיאומטרית */
         }
 
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* עיצוב הלוגו */
         .new-logo {
-            max-width: 220px;
+            max-width: 200px;
             margin: 20px auto;
-            animation: fadeInDown 1s ease-in-out;
         }
 
         nav {
-            background-color: #004d40;
-            padding: 15px;
+            background-color: #333; /* אפור כהה */
+            padding: 10px;
             text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
-            font-size: 1.3em;
-            padding: 10px 20px;
-            border-radius: 30px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            background-color: #00c2cb;
-            transform: translateY(-5px); /* אנימציה של ריחוף */
+            color: #00c2cb; /* טורקיז בהיר */
         }
 
         section {
-            padding: 60px;
+            padding: 40px;
             text-align: center;
         }
 
         .service {
-            background: #ffffff;
+            background-color: #ffffff;
             margin: 20px auto;
-            padding: 30px;
-            border-radius: 15px;
+            padding: 20px;
+            border-radius: 10px;
             max-width: 600px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -74,54 +75,31 @@
 
         .service:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
-            font-size: 2.2em;
-            margin-bottom: 20px;
-            color: #00796b;
+            font-size: 2em;
+            margin-bottom: 15px;
+            color: #333; /* אפור כהה */
         }
 
         p {
             font-size: 1.2em;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            margin-top: 20px;
-            background-color: #00c2cb;
-            color: white;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 1.1em;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: #00796b;
-            transform: translateY(-5px); /* כפתור "קופץ" מעט בהנפת עכבר */
+            line-height: 1.6;
         }
 
         footer {
-            background-color: #004d40;
+            background-color: #333; /* אפור כהה */
             color: white;
             padding: 20px;
             text-align: center;
             font-size: 0.9em;
-            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%); /* עיצוב גיאומטרי לפוטר */
         }
-
+        
+        /* אפקט כניסה עדין */
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(-20px); }
-            100% { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes fadeInDown {
-            0% { opacity: 0; transform: translateY(-50px); }
             100% { opacity: 1; transform: translateY(0); }
         }
 
@@ -146,11 +124,7 @@
 </nav>
 
 <section>
-    <div class="service">
-        <h2>ביטוח פיננסי</h2>
-        <p>הגנה על הנכסים הפיננסיים שלך עם פוליסות מותאמות אישית לצרכים הכלכליים שלך.</p>
-        <a href="#contact" class="btn">למידע נוסף</a>
-    </div>
+    <!-- השירותים והתוכן ממשיך כאן... -->
 </section>
 
 <footer>
