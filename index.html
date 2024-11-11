@@ -10,18 +10,17 @@
             margin: 0;
             padding: 0;
             direction: rtl;
-            background-color: #f0f8ff;
+            background-color: #e0f7fa;
             color: #333;
             overflow-x: hidden;
         }
 
-        /* עיצוב הכותרת והאנימציה שלה */
         header {
-            background-color: #00bcd4;
+            background-color: #00796b;
             color: white;
             padding: 40px 0;
             text-align: center;
-            font-size: 2em;
+            font-size: 2.2em;
             font-weight: bold;
             letter-spacing: 3px;
             animation: fadeIn 1s ease-in-out;
@@ -33,9 +32,8 @@
             margin-bottom: 20px;
         }
 
-        /* תפריט ניווט */
         nav {
-            background-color: #333;
+            background-color: #004d40;
             padding: 10px;
             text-align: center;
         }
@@ -49,17 +47,16 @@
         }
 
         nav a:hover {
-            color: #00bcd4;
+            color: #80cbc4;
         }
 
-        /* עיצוב ה"שירותים" עם אפקטים */
         section {
             padding: 40px;
             text-align: center;
         }
 
         .service {
-            background-color: #fff;
+            background-color: #ffffff;
             margin: 20px auto;
             padding: 20px;
             border-radius: 10px;
@@ -75,30 +72,19 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        .service:before {
-            content: '';
-            position: absolute;
-            top: -50px;
-            right: -50px;
-            width: 150px;
-            height: 150px;
-            background-color: #00bcd4;
-            border-radius: 50%;
-            opacity: 0.1;
-            z-index: 0;
-        }
-
         h2 {
-            font-size: 1.8em;
+            font-size: 2em;
             margin-bottom: 15px;
+            color: #004d40;
         }
 
         p {
             font-size: 1.2em;
+            line-height: 1.6;
         }
 
         .about, .contact {
-            background-color: #e0f7fa;
+            background-color: #ffffff;
             padding: 30px;
             margin: 30px 0;
             border-radius: 10px;
@@ -107,7 +93,7 @@
         }
 
         .contact a {
-            color: #00bcd4;
+            color: #00796b;
             text-decoration: none;
             font-size: 1.2em;
         }
@@ -129,7 +115,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: #004d40;
             color: white;
             padding: 20px;
             text-align: center;
@@ -183,32 +169,52 @@
 
     <div id="pension" class="service">
         <h2>ביטוח פנסיוני</h2>
-        <p>הבטח את העתיד שלך עם ביטוח פנסיוני מותאם אישית לצרכים שלך. עם פתרונות המאפשרים לך לתכנן את הפנסיה בצורה מאובטחת, תוכל ליהנות מהבטחון הכלכלי שאתה זקוק לו לאחר הפרישה.</p>
+        <p>כדי להבטיח יציבות כלכלית עתידית, אנו מציעים פתרונות פנסיוניים אישיים המתאימים לצרכים ולמטרות שלך. אנו מסייעים לך לבחור את התוכנית הטובה ביותר עבורך, כך שתוכל ליהנות מפרישה בראש שקט.</p>
     </div>
 
     <div id="health" class="service">
         <h2>ביטוח בריאות</h2>
-        <p>בריאותך חשובה לנו. אנו מציעים ביטוחי בריאות מותאמים אישית שיכסו אותך בכל מצב רפואי, עם כיסויים מותאמים למצבך הבריאותי ולצרכים האישיים שלך.</p>
-    </div>
-
-    <div id="life" class="service">
-        <h2>ביטוח חיים</h2>
-        <p>דאג לעתיד המשפחה שלך עם ביטוח חיים שמעניק ביטחון ושקט נפשי עבורך ועבור יקיריך. פתרונותינו יבטיחו שאתה תשאיר אחריך עזבון כלכלי שישמור על רווחת משפחתך.</p>
+        <p>הבריאות שלך היא הנכס החשוב ביותר. תוכלו לקבל כיסוי רחב למקרים רפואיים לא צפויים, ניתוחים פרטיים, תרופות מחוץ לסל ועוד. אנו מתאימים את הביטוח הבריאותי הנכון עבורכם, כך שתוכלו לקבל את הטיפול המיטבי, כשזה חשוב באמת.</p>
     </div>
 
     <div id="critical" class="service">
         <h2>מחלות קשות</h2>
-        <p>הכנס את עצמך ואת משפחתך תחת כיסוי ביטוחי במקרה של מחלה קשה. אנו מציעים ביטוחים שמספקים תמיכה כלכלית בזמן קשה, ומסייעים לך לעמוד בהוצאות הרפואיות ולטפל בעצמך בצורה מיטבית.</p>
+        <p>כיסוי שמעניק פיצוי כספי חד פעמי במקרה של מחלה קשה. הכסף יאפשר להתמקד בהחלמה, ללא דאגות כלכליות, ויבטיח לכם שקט נפשי גם במצבים המאתגרים ביותר.</p>
+    </div>
+
+    <div id="life" class="service">
+        <h2>ביטוח חיים</h2>
+        <p>דואגים לעתיד המשפחה שלך עם כיסוי ביטוחי המעניק רשת ביטחון כלכלית במקרה של אירוע לא צפוי.</p>
     </div>
 
     <div id="travel" class="service">
-        <h2>ביטוח חו"ל</h2>
-        <p>הטיסות והנסיעות שלך לא צריכות להיות דאגה נוספת. עם ביטוח חו"ל שלנו, תוכל לנסוע בביטחון וליהנות מכיסוי במקרה של תאונות, מחלות או בעיות במהלך השהות בחו"ל.</p>
-        <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//9324ff9e-2695-4af2-8f9f-495414e25505.jpg
-          &distributor=6114
-          &agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" width="728" height="210" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <h2>ביטוח נסיעות לחו"ל</h2>
+        <p>חשוב שתהיו מכוסים לכל מקרה בלתי צפוי בחו"ל. כך תוכלו לקבל כיסוי מקיף להוצאות רפואיות דחופות, אשפוזים, פינוי חירום, טיפולים רפואיים, וליהנות מטיול בראש שקט בידיעה שאתם מוגנים.</p>
     </div>
 
     <div id="about" class="about">
         <h2>אודות</h2>
-        <p>אבי בלאיש הוא סוכן ביטוח עם ניסיון של 35 שנה בתחום. במהלך השנים, ליווינו משפחות
+        <p>אנו מציעים לכם יותר מ-35 שנות ניסיון בשירות מסור, אמין ומקצועי, ורואים בעבודתנו שליחות אמיתית. אנו מתמחים ביצירת פתרונות ביטוחיים ופיננסיים מותאמים אישית לצרכים הייחודיים שלכם ושל בני המשפחה, תוך ליווי צמוד לאורך כל הדרך.</p>
+        <p>הביטוח והפיננסים הם חלק חשוב מהעתיד שלך. אנו כאן כדי לעזור לכם למצוא את הפתרון המדויק, בין אם אתם עצמאים, שכירים, רווקים או נשואים. אנו מתאימים את הביטוחים ואת התוכניות הפיננסיות לצרכים האישיים שלכם ומספקים פתרונות שמבטיחים לכם עתיד בטוח ומוצלח.</p>
+    </div>
+
+    <div id="contact" class="contact">
+        <h2>צור קשר</h2>
+        <p>אבי בלאיש – סוכן ביטוח, פיננסים ואלמנטרי מטעם משרד האוצר. חבר לשכת סוכני הביטוח בישראל.<br>
+        טל: 050-5212281<br>
+        מייל: <a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
+
+        <p>לירון בלאיש – סוכן ביטוח ופיננסיים מטעם משרד האוצר.<br>
+        טל: 050-2835069<br>
+        מייל: <a href="mailto:liron@balaish.com">liron@balaish.com</a></p>
+
+        <a href="https://wa.me/0505212281" class="whatsapp">שלח הודעה בוואטסאפ</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 אבי בלאיש - סוכן ביטוח ופיננסים. כל הזכויות שמורות.</p>
+</footer>
+
+</body>
+</html>
