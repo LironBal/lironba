@@ -37,12 +37,14 @@
             background-color: #4d88cc;
             padding: 10px;
             text-align: center;
+            white-space: nowrap;
+            overflow-x: auto;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 5px;
             font-size: 1.1em;
             padding: 5px 10px;
             transition: background-color 0.3s ease;
@@ -54,17 +56,11 @@
             background-color: #2e5a87;
         }
 
-        /* תפריט נפתח למובייל */
+        /* התאמה למסכים קטנים */
         @media (max-width: 768px) {
-            nav {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
             nav a {
-                margin: 5px 0;
-                width: 90%;
-                text-align: center;
+                font-size: 1em;
+                padding: 5px 8px;
             }
         }
 
