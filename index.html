@@ -5,33 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אבי בלאיש - סוכן ביטוח</title>
     <style>
+        /* עיצוב כללי */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             direction: rtl;
-            background-color: #f2f4f8;
-            color: #333;
+            background-color: #f5f7fa;
+            color: #2a2a2a;
             overflow-x: hidden;
         }
 
+        /* כותרת ראשית */
         header {
-            background-color: #004d40;
+            background-color: #003366;
             color: white;
-            padding: 40px 0;
+            padding: 20px 0;
             text-align: center;
-            font-size: 2.2em;
+            font-size: 2em;
             font-weight: bold;
-            letter-spacing: 2px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            position: relative;
         }
 
         .logo {
-            max-width: 150px;
-            margin-bottom: 15px;
+            max-width: 100px;
+            height: auto;
         }
 
+        /* תפריט עליון */
         nav {
-            background-color: #00695c;
+            background-color: #004080;
             padding: 10px;
             text-align: center;
         }
@@ -39,15 +46,18 @@
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
+            margin: 0 10px;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            transition: background-color 0.3s ease;
+            border-radius: 5px;
         }
 
         nav a:hover {
-            color: #80cbc4;
+            background-color: #00224d;
         }
 
+        /* שירותים */
         section {
             padding: 40px;
             text-align: center;
@@ -56,36 +66,44 @@
         .service, .about, .contact {
             background-color: #ffffff;
             margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 12px;
             max-width: 700px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover, .about:hover, .contact:hover {
+            transform: scale(1.02);
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 1.8em;
             margin-bottom: 15px;
-            color: #004d40;
+            color: #003366;
         }
 
         p {
-            font-size: 1.15em;
+            font-size: 1.1em;
             line-height: 1.6;
-            color: #333;
+            color: #2a2a2a;
         }
 
+        /* יצירת קשר */
         .contact a {
-            color: #004d40;
+            color: #003366;
             text-decoration: none;
-            font-size: 1.15em;
+            font-weight: bold;
+            font-size: 1.1em;
         }
 
+        /* כפתור וואטסאפ */
         .whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
+            padding: 15px 25px;
+            border-radius: 30px;
             text-decoration: none;
             display: inline-block;
             margin: 20px 0;
@@ -94,17 +112,19 @@
         }
 
         .whatsapp:hover {
-            background-color: #128c7e;
+            background-color: #1ebc59;
         }
 
+        /* תחתית הדף */
         footer {
-            background-color: #004d40;
+            background-color: #003366;
             color: white;
             padding: 20px;
             text-align: center;
             font-size: 0.9em;
         }
 
+        /* עיצוב באנר חו"ל */
         iframe {
             margin-top: 20px;
             max-width: 100%;
@@ -171,14 +191,8 @@
 
     <div id="contact" class="contact">
         <h2>צור קשר</h2>
-        <p>אבי בלאיש – סוכן ביטוח, פיננסים ואלמנטרי מטעם משרד האוצר. חבר לשכת סוכני הביטוח בישראל.<br>
-        טל: 050-5212281<br>
-        מייל: <a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
-
-        <p>לירון בלאיש – סוכן ביטוח ופיננסיים מטעם משרד האוצר.<br>
-        טל: 050-2835069<br>
-        מייל: <a href="mailto:liron@balaish.com">liron@balaish.com</a></p>
-
+        <p>אבי בלאיש – סוכן ביטוח, פיננסים ואלמנטרי מטעם משרד האוצר. טל: 050-5212281, מייל: <a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
+        <p>לירון בלאיש – סוכן ביטוח ופיננסיים מטעם משרד האוצר. טל: 050-2835069, מייל: <a href="mailto:liron@balaish.com">liron@balaish.com</a></p>
         <a href="https://wa.me/0505212281" class="whatsapp">צ'אט ב-WhatsApp</a>
     </div>
 </section>
