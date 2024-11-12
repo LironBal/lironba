@@ -10,85 +10,100 @@
             margin: 0;
             padding: 0;
             direction: rtl;
-            background-color: #f2f4f8;
+            background: linear-gradient(135deg, #e0f7fa, #f0f7f9); /* גרדיאנט לרקע */
             color: #333;
             overflow-x: hidden;
+            animation: fadeIn 1s ease-in-out;
         }
 
         header {
-          https://res.cloudinary.com/dfuda0v9c/image/upload/v1731318606/%D7%9C%D7%95%D7%92%D7%95_%D7%A9%D7%A7%D7%95%D7%A3_-_%D7%90%D7%91%D7%99_%D7%91%D7%9C%D7%90%D7%99%D7%A9_g3giaa.png
+            background: linear-gradient(90deg, #00796b, #00c2cb); /* גרדיאנט בכותרת */
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%); /* כותרת בצורה גיאומטרית */
         }
 
-        .logo {
-            max-width: 150px;
-            margin-bottom: 15px;
+        .new-logo {
+            max-width: 220px;
+            margin: 20px auto;
+            animation: fadeInDown 1s ease-in-out;
         }
 
         nav {
-            background-color: #00695c;
-            padding: 10px;
+            background-color: #004d40;
+            padding: 15px;
             text-align: center;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 1.2em;
-            transition: color 0.3s ease;
+            margin: 0 20px;
+            font-size: 1.3em;
+            padding: 10px 20px;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         nav a:hover {
-            color: #80cbc4;
+            background-color: #00c2cb;
+            transform: translateY(-5px); /* אנימציה של ריחוף */
         }
 
         section {
-            padding: 40px;
+            padding: 60px;
             text-align: center;
         }
 
-        .service, .about, .contact {
-            background-color: #ffffff;
+        .service {
+            background: #ffffff;
             margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-            max-width: 700px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
         }
 
         h2 {
-            font-size: 2em;
-            margin-bottom: 15px;
-            color: #004d40;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #00796b;
         }
 
         p {
-            font-size: 1.15em;
-            line-height: 1.6;
-            color: #333;
+            font-size: 1.2em;
+            line-height: 1.8;
+            color: #555;
         }
 
-        .contact a {
-            color: #004d40;
-            text-decoration: none;
-            font-size: 1.15em;
-        }
-
-        .whatsapp {
-            background-color: #25d366;
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 20px;
+            background-color: #00c2cb;
             color: white;
-            padding: 15px 30px;
             border-radius: 50px;
             text-decoration: none;
-            display: inline-block;
-            margin: 20px 0;
-            font-size: 1.2em;
-            transition: background-color 0.3s ease;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
-        .whatsapp:hover {
-            background-color: #128c7e;
+        .btn:hover {
+            background-color: #00796b;
+            transform: translateY(-5px); /* כפתור "קופץ" מעט בהנפת עכבר */
         }
 
         footer {
@@ -97,21 +112,25 @@
             padding: 20px;
             text-align: center;
             font-size: 0.9em;
+            clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%); /* עיצוב גיאומטרי לפוטר */
         }
 
-        iframe {
-            margin-top: 20px;
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
+
+        @keyframes fadeInDown {
+            0% { opacity: 0; transform: translateY(-50px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש" class="logo">
-    אבי בלאיש - סוכן ביטוח
+    https://res.cloudinary.com/dfuda0v9c/image/upload/v1731318606/%D7%9C%D7%95%D7%92%D7%95_%D7%A9%D7%A7%D7%95%D7%A3_-_%D7%90%D7%91%D7%99_%D7%91%D7%9C%D7%90%D7%99%D7%A9_g3giaa.png
 </header>
 
 <nav>
@@ -126,59 +145,15 @@
 </nav>
 
 <section>
-    <div id="financial" class="service">
+    <div class="service">
         <h2>ביטוח פיננסי</h2>
-        <p>ניהול נכון של הנכסים הפיננסיים שלך יכול לשפר את העתיד שלך ושל משפחתך. אנו מציעים פתרונות פיננסיים מותאמים אישית לצרכים שלך, כך שתוכל לנהל את ההשקעות שלך ולתכנן את הפנסיה בצורה אופטימלית.</p>
-    </div>
-
-    <div id="pension" class="service">
-        <h2>ביטוח פנסיוני</h2>
-        <p>הבטח את העתיד שלך עם ביטוח פנסיוני מותאם אישית לצרכים שלך. עם פתרונות המאפשרים לך לתכנן את הפנסיה בצורה מאובטחת, תוכל ליהנות מהבטחון הכלכלי שאתה זקוק לו לאחר הפרישה.</p>
-    </div>
-
-    <div id="health" class="service">
-        <h2>ביטוח בריאות</h2>
-        <p>בריאותך חשובה לנו. אנו מציעים ביטוחי בריאות מותאמים אישית שיכסו אותך בכל מצב רפואי, עם כיסויים מותאמים למצבך הבריאותי ולצרכים האישיים שלך.</p>
-    </div>
-
-    <div id="life" class="service">
-        <h2>ביטוח חיים</h2>
-        <p>דאג לעתיד המשפחה שלך עם ביטוח חיים שמעניק ביטחון ושקט נפשי עבורך ועבור יקיריך. פתרונותינו יבטיחו שאתה תשאיר אחריך עזבון כלכלי שישמור על רווחת משפחתך.</p>
-    </div>
-
-    <div id="critical" class="service">
-        <h2>מחלות קשות</h2>
-        <p>אנו מבינים שמחלות קשות יכולות להוות אתגר משמעותי. לכן, אנו מציעים כיסויים רחבים המעניקים לך תמיכה כלכלית והגנה במקרה של מחלה קשה, כדי שתוכל להתרכז בטיפול בעצמך ובבריאותך.</p>
-    </div>
-
-    <div id="travel" class="service">
-        <h2>ביטוח נסיעות לחו"ל</h2>
-        <p>חשוב שתהיו מכוסים לכל מקרה בלתי צפוי בחו"ל. כך תוכלו לקבל כיסוי מקיף להוצאות רפואיות, אשפוזים, טיפולים רפואיים, וליהנות מטיול בראש שקט בידיעה שאתם מוגנים.</p>
-        <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//de193c49-ed0e-427b-9581-752ae0510c75.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" width="728" height="210" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    </div>
-
-    <div id="about" class="about">
-        <h2>אודות</h2>
-        <p>אנו מציעים לכם יותר מ-35 שנות ניסיון בשירות מסור, אמין ומקצועי, ורואים בעבודתנו שליחות אמיתית. אנו מתמחים ביצירת פתרונות ביטוחיים ופיננסיים מותאמים אישית לצרכים הייחודיים שלכם ושל בני המשפחה, תוך ליווי צמוד לאורך כל הדרך.</p>
-        <p>עם מבט לעתיד וליציבות הכלכלית, אנו כאן כדי לדאוג לביטחון שלכם ושל המעגלים המשפחתיים הקרובים, כך שתוכלו להתמודד עם כל אתגר שיבוא בראש שקט ובביטחון מלא.</p>
-    </div>
-
-    <div id="contact" class="contact">
-        <h2>צור קשר</h2>
-        <p>אבי בלאיש – סוכן ביטוח, פיננסים ואלמנטרי מטעם משרד האוצר. חבר לשכת סוכני הביטוח בישראל.<br>
-        טל: 050-5212281<br>
-        מייל: <a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
-
-        <p>לירון בלאיש – סוכן ביטוח ופיננסיים מטעם משרד האוצר.<br>
-        טל: 050-2835069<br>
-        מייל: <a href="mailto:liron@balaish.com">liron@balaish.com</a></p>
-
-        <a href="https://wa.me/0505212281" class="whatsapp">צ'אט ב-WhatsApp</a>
+        <p>הגנה על הנכסים הפיננסיים שלך עם פוליסות מותאמות אישית לצרכים הכלכליים שלך.</p>
+        <a href="#contact" class="btn">למידע נוסף</a>
     </div>
 </section>
 
 <footer>
-    <p>&copy; 2024 אבי בלאיש - כל הזכויות שמורות.</p>
+    כל הזכויות שמורות © אבי בלאיש
 </footer>
 
 </body>
