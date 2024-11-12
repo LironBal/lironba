@@ -11,34 +11,30 @@
             margin: 0;
             padding: 0;
             direction: rtl;
-            background-color: #f5f7fa;
+            background-color: #e6f0ff; /* כחול בהיר לרקע */
             color: #2a2a2a;
-            overflow-x: hidden;
         }
 
         /* כותרת ראשית */
         header {
-            background-color: #003366;
+            background-color: #336699;
             color: white;
             padding: 20px 0;
             text-align: center;
-            font-size: 2em;
-            font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
-            position: relative;
         }
 
         .logo {
-            max-width: 100px;
+            max-width: 70px;
             height: auto;
         }
 
         /* תפריט עליון */
         nav {
-            background-color: #004080;
+            background-color: #4d88cc;
             padding: 10px;
             text-align: center;
         }
@@ -54,13 +50,12 @@
         }
 
         nav a:hover {
-            background-color: #00224d;
+            background-color: #2e5a87;
         }
 
         /* שירותים */
         section {
-            padding: 40px;
-            text-align: center;
+            padding: 20px;
         }
 
         .service, .about, .contact {
@@ -69,7 +64,7 @@
             padding: 30px;
             border-radius: 12px;
             max-width: 700px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: transform 0.3s ease;
         }
@@ -80,8 +75,18 @@
 
         h2 {
             font-size: 1.8em;
-            margin-bottom: 15px;
-            color: #003366;
+            color: #336699;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #4d88cc;
+            margin: 8px auto 15px;
         }
 
         p {
@@ -92,7 +97,7 @@
 
         /* יצירת קשר */
         .contact a {
-            color: #003366;
+            color: #336699;
             text-decoration: none;
             font-weight: bold;
             font-size: 1.1em;
@@ -117,9 +122,9 @@
 
         /* תחתית הדף */
         footer {
-            background-color: #003366;
+            background-color: #336699;
             color: white;
-            padding: 20px;
+            padding: 15px;
             text-align: center;
             font-size: 0.9em;
         }
@@ -130,6 +135,21 @@
             max-width: 100%;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* התאמה למובייל */
+        @media (max-width: 768px) {
+            header {
+                font-size: 1.5em;
+                flex-direction: column;
+            }
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+            .logo {
+                max-width: 50px;
+            }
         }
     </style>
 </head>
@@ -185,8 +205,7 @@
 
     <div id="about" class="about">
         <h2>אודות</h2>
-        <p>אנו מציעים לכם יותר מ-35 שנות ניסיון בשירות מסור, אמין ומקצועי, ורואים בעבודתנו שליחות אמיתית. אנו מתמחים ביצירת פתרונות ביטוחיים ופיננסיים מותאמים אישית לצרכים הייחודיים שלכם ושל בני המשפחה, תוך ליווי צמוד לאורך כל הדרך.</p>
-        <p>עם מבט לעתיד וליציבות הכלכלית, אנו כאן כדי לדאוג לביטחון שלכם ושל המעגלים המשפחתיים הקרובים, כך שתוכלו להתמודד עם כל אתגר שיבוא בראש שקט ובביטחון מלא.</p>
+        <p>אנו מציעים לכם מעל 35 שנות ניסיון בשירות מסור, אמין ומקצועי. ההתמחות שלנו היא יצירת פתרונות ביטוחיים מותאמים אישית לצרכים שלכם, תוך ליווי לאורך כל הדרך.</p>
     </div>
 
     <div id="contact" class="contact">
