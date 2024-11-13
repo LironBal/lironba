@@ -6,66 +6,164 @@
     <title>אבי בלאיש - סוכן ביטוח</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             direction: rtl;
-            background-color: #f4f4f4;
+            background-color: #f0f8ff;
             color: #333;
+            overflow-x: hidden;
         }
+
+        /* עיצוב הכותרת והאנימציה שלה */
         header {
             background-color: #00bcd4;
             color: white;
-            padding: 15px 0;
+            padding: 40px 0;
             text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 3px;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
         }
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        /* תפריט ניווט */
         nav {
             background-color: #333;
-            color: white;
             padding: 10px;
             text-align: center;
         }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 20px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
         }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        /* עיצוב ה"שירותים" עם אפקטים */
         section {
-            padding: 20px;
-        }
-        .service {
-            margin: 20px 0;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
+            padding: 40px;
             text-align: center;
         }
+
+        .service {
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .service:before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background-color: #00bcd4;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        .about, .contact {
+            background-color: #e0f7fa;
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease-in-out;
+        }
+
+        /* קישורים */
         a.whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 15px 30px;
+            border-radius: 50px;
             text-decoration: none;
             display: inline-block;
-            margin: 10px 0;
-        }
-        .about, .contact {
-            background-color: #e0f7fa;
-            padding: 15px;
             margin: 20px 0;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
         }
+
+        a.whatsapp:hover {
+            background-color: #128c7e;
+        }
+
         .contact a {
             color: #00bcd4;
             text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        /* אנימציות */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>אבי בלאיש - סוכן ביטוח</h1>
+    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש" class="logo">
+    אבי בלאיש - סוכן ביטוח
 </header>
 
 <nav>
