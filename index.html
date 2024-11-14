@@ -3,114 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אבי בלאיש - סוכן ביטוח ופיננסים</title>
+    <title>אבי בלאיש - סוכן ביטוח</title>
     <style>
+        /* עיצוב כללי */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
             margin: 0;
             padding: 0;
-            text-align: center;
+            direction: rtl;
+            background-color: #e6f0ff;
+            color: #2a2a2a;
         }
+
+        /* כותרת ראשית */
         header {
-            background-color: #004d99;
-            padding: 20px;
+            background-color: #336699;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
         }
-        header h1 {
-            margin: 0;
-            color: #fff;
+
+        .logo {
+            max-width: 50px;
+            height: auto;
         }
-        .logo img {
-            max-width: 80px;
-            vertical-align: middle;
-        }
-        .container {
-            padding: 20px;
-        }
-        .service {
-            background-color: #e6f2ff;
-            border: 1px solid #004d99;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 15px auto;
-            max-width: 600px;
+
+        /* תפריט עליון */
+        nav {
+            background-color: #4d88cc;
+            padding: 10px;
             text-align: center;
         }
-        .service h2 {
-            margin-top: 0;
-            color: #004d99;
-            border-bottom: 1px solid #004d99;
-            padding-bottom: 5px;
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
         }
-        .contact-info {
-            margin: 20px 0;
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            background-color: #2e5a87;
+        }
+
+        /* שירותים */
+        section {
+            padding: 20px;
+        }
+
+        .service, .about, .contact {
+            background-color: #ffffff;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 700px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover, .about:hover, .contact:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #336699;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #4d88cc;
+            margin: 8px auto 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #2a2a2a;
+        }
+
+        /* יצירת קשר */
+        .contact a {
+            color: #336699;
+            text-decoration: none;
+            font-weight: bold;
             font-size: 1.1em;
         }
-        .contact-info p {
-            margin: 5px;
-        }
-        .whatsapp-button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 20px;
+
+        /* כפתור וואטסאפ */
+        .whatsapp {
             background-color: #25d366;
-            color: #fff;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 30px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .whatsapp:hover {
+            background-color: #1ebc59;
+        }
+
+        /* תחתית הדף */
+        footer {
+            background-color: #336699;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        /* עיצוב באנר חו"ל */
+        iframe {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* עיצוב למובייל */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                padding: 5px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">
-        <img src="your-logo.png" alt="לוגו">
-    </div>
-    <h1>אבי בלאיש - סוכן ביטוח ופיננסים</h1>
+    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש" class="logo">
+    אבי בלאיש - סוכן ביטוח
 </header>
 
-<div class="container">
+<nav>
+    <div class="nav-links">
+        <a href="#financial">ביטוח פיננסי</a>
+        <a href="#pension">ביטוח פנסיוני</a>
+        <a href="#health">ביטוח בריאות</a>
+        <a href="#life">ביטוח חיים</a>
+        <a href="#critical">ביטוח מחלות קשות</a>
+        <a href="#travel">ביטוח חו"ל</a>
+        <a href="#about">קצת עלינו 😊</a>
+        <a href="#contact">צור קשר</a>
+    </div>
+</nav>
 
-    <section id="about" class="service">
-        <h2>קצת עלינו 🙂</h2>
-        <p>אנו מציעים יותר מ-35 שנות ניסיון בשירות מסור ואמין, ורואים בעבודתנו שליחות אמיתית. חברי לשכת סוכני הביטוח בישראל ובעלי רישיון פנסיוני מטעם משרד האוצר, מתמחים בהתאמת פתרונות ביטוחיים ופיננסיים אישיים, ומלווים אתכם בכל שלב במסע שלכם לעתיד בטוח.</p>
-    </section>
+<section id="financial" class="service">
+    <h2>ביטוח פיננסי</h2>
+    <p>משפחתך ראויה לעתיד כלכלי בטוח ויציב. אנו מציעים מגוון רחב של תוכניות חסכון, המותאמות אישית להבטחת הביטחון הכלכלי שלך ושל משפחתך.</p>
+</section>
 
-    <section id="financial" class="service">
-        <h2>ביטוח פיננסי</h2>
-        <p>העתיד הכלכלי שלך ושל המשפחה שלך חשוב לנו. עם מגוון תוכניות חיסכון מותאמות אישית, אנו כאן כדי להבטיח לכם יציבות ושגשוג כלכלי לאורך זמן.</p>
-    </section>
+<section id="pension" class="service">
+    <h2>ביטוח פנסיוני</h2>
+    <p>לא רק לגיל הפרישה - ביטוח פנסיוני עם כיסויים ביטוחיים לאובדן כושר עבודה, המגן עליך בכל שלב בחיים.</p>
+</section>
 
-    <section id="health" class="service">
-        <h2>ביטוח בריאות</h2>
-        <p>בריאותך בידיים טובות. אנו מציעים כיסוי רחב לניתוחים, תרופות, השתלות, ושירותים נוספים המותאמים לצרכים שלך, כדי שתוכל לקבל את הטיפול הטוב ביותר בזמן הנכון.</p>
-    </section>
+<section id="health" class="service">
+    <h2>ביטוח בריאות</h2>
+    <p>כיסוי בריאותי מקיף הכולל טיפולים, השתלות, תרופות מחוץ לסל וכיסויים נוספים בהתאמה אישית. בריאותך בידיים טובות.</p>
+</section>
 
-    <section id="critical" class="service">
-        <h2>ביטוח מחלות קשות</h2>
-        <p>ביטוח מחלות קשות נועד להגן עליך ועל היקרים לך במצבים המאתגרים ביותר. כשהחיים מזמנים אתגרים בריאותיים, הפיצוי הכספי מאפשר לך להתמקד אך ורק בהחלמה ובבריאות, בלי דאגות כלכליות. אנחנו כאן כדי להעניק את התמיכה שתאפשר לך לעבור את התקופה הזו בראש שקט.</p>
-    </section>
+<section id="life" class="service">
+    <h2>ביטוח חיים</h2>
+    <p>דואגים לעתיד המשפחה שלך עם ביטוח חיים שמעניק שקט נפשי לך וליקיריך.</p>
+</section>
 
-    <section id="travel" class="service">
-        <h2>ביטוח נסיעות לחו"ל</h2>
-        <p>חשוב שתהיו מכוסים לכל מקרה בלתי צפוי בחו"ל. כך תוכלו לקבל כיסוי מקיף להוצאות רפואיות, אשפוזים וטיפולים, וליהנות מטיול בראש שקט בידיעה שאתם מוגנים. <strong>לרכישה לחצו על הבאנר:</strong></p>
-        <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//2c2a010a-5d2f-4a82-a6d4-508a82e2287b.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" width="250" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-    </section>
+<section id="critical" class="service">
+    <h2>ביטוח מחלות קשות</h2>
+    <p>תמיכה כספית במצבים של מחלות קשות, כך שתוכל להתמקד בהחלמה מבלי לדאוג למצב הכלכלי שלך.</p>
+</section>
 
-    <section id="contact" class="service">
-        <h2>צור קשר</h2>
-        <div class="contact-info">
-            <p>אבי בלאיש – סוכן ביטוח, פיננסים ואלמנטרי</p>
-            <p>לירון בלאיש – סוכן ביטוח ופיננסים</p>
-            <p>טלפון: 050-5212281</p>
-            <p>מייל: <a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
-            <a href="https://wa.me/0502835069" class="whatsapp-button">WhatsApp</a>
-        </div>
-    </section>
+<section id="travel" class="service">
+    <h2>ביטוח נסיעות לחו"ל</h2>
+    <p>כיסוי מקיף לטיפולים ואשפוזים בלתי צפויים בחו"ל - לנסיעה בראש שקט ולביטחון מלא. <br> <strong>לחצו על הבאנר לרכישה:</strong></p>
+    <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//2c2a010a-5d2f-4a82-a6d4-508a82e2287b.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" width="250" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+</section>
 
-</div>
+<section id="about" class="about">
+    <h2>קצת עלינו 😊</h2>
+    <p>אנו מציעים יותר מ-35 שנות ניסיון בשירות אמין ומסור, ורואים בכם חלק בלתי נפרד ממשפחתנו. כחברי לשכת סוכני הביטוח ובעלי רישיון פנסיוני מטעם משרד האוצר, אנו כאן להעניק לכם ליווי צמוד ופתרונות המותאמים אישית לצרכים הייחודיים שלכם.</p>
+</section>
+
+<section id="contact" class="contact">
+    <h2>צור קשר</h2>
+    <p>אבי בלאיש – סוכן ביטוח ופיננסים<br>
+       טלפון: <a href="tel:0505212281">050-5212281</a><br>
+       מייל: <a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
+    <p>לירון בלאיש – סוכן ביטוח ופיננסים<br>
+       טלפון: <a href="tel:0502835069">050-2835069</a><br>
+       מייל: <a href="mailto:liron@balaish.com">liron@balaish.com</a></p>
+    <a href="https://wa.me/+9720502835069" class="whatsapp">Whatsapp</a>
+</section>
+
+<footer>
+    <p>&copy; 2024 אבי בלאיש - סוכן ביטוח. כל הזכויות שמורות.</p>
+</footer>
 
 </body>
 </html>
