@@ -101,12 +101,21 @@
             color: #2a2a2a;
         }
 
-        /* יצירת קשר */
-        .contact a {
-            color: #336699;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
+        /* iFrame עיצוב והתאמה אוטומטית */
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 100%; /* יחס 1:1 */
+        }
+
+        .iframe-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         /* כפתור וואטסאפ */
@@ -126,6 +135,12 @@
             background-color: #1ebc59;
         }
 
+        /* כפתור וואטסאפ נגיש */
+        .whatsapp span {
+            position: absolute;
+            left: -9999px;
+        }
+
         /* תחתית הדף */
         footer {
             background-color: #336699;
@@ -133,14 +148,6 @@
             padding: 15px;
             text-align: center;
             font-size: 0.9em;
-        }
-
-        /* עיצוב באנר חו"ל */
-        iframe {
-            margin-top: 20px;
-            max-width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
         /* עיצוב למובייל */
@@ -155,82 +162,59 @@
                 padding: 5px;
                 font-size: 0.9em;
             }
+
+            .service, .about, .contact {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש" class="logo">
+    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" 
+         alt="לוגו של אבי בלאיש - סוכן ביטוח" class="logo">
     אבי בלאיש - סוכן ביטוח
 </header>
 
 <nav>
     <div class="nav-links">
-        <a href="#financial">ביטוח פיננסי</a>
-        <a href="#pension">ביטוח פנסיוני</a>
-        <a href="#health">ביטוח בריאות</a>
-        <a href="#life">ביטוח חיים</a>
-        <a href="#critical">ביטוח מחלות קשות</a>
-        <a href="#travel">ביטוח חו"ל</a>
-        <a href="#about">קצת עלינו 😊</a>
-        <a href="#contact">צור קשר</a>
+        <a href="#financial" title="תוכניות חיסכון וביטחון כלכלי">ביטוח פיננסי</a>
+        <a href="#pension" title="פתרונות פנסיוניים למען העתיד שלך">ביטוח פנסיוני</a>
+        <a href="#health" title="בריאותך בידיים טובות">ביטוח בריאות</a>
+        <a href="#life" title="דאגה לעתיד המשפחה שלך">ביטוח חיים</a>
+        <a href="#critical" title="פיצוי כספי למחלות קשות">ביטוח מחלות קשות</a>
+        <a href="#travel" title="כיסוי מושלם לנסיעות לחו"ל">ביטוח חו"ל</a>
+        <a href="#about" title="קצת עלינו ועל השירות">קצת עלינו 😊</a>
+        <a href="#contact" title="צור קשר איתנו">צור קשר</a>
     </div>
 </nav>
 
 <section id="financial" class="service">
     <h2>ביטוח פיננסי</h2>
-    <p>משפחתך ראויה לעתיד כלכלי בטוח ויציב. אנו מציעים מגוון רחב של תוכניות חסכון, המותאמות אישית להבטחת הביטחון הכלכלי שלך ושל משפחתך.</p>
-</section>
-
-<section id="pension" class="service">
-    <h2>ביטוח פנסיוני</h2>
-    <p>לא רק לגיל הפרישה - ביטוח פנסיוני עם כיסויים ביטוחיים לאובדן כושר עבודה, המגן עליך בכל שלב בחיים.</p>
-</section>
-
-<section id="health" class="service">
-    <h2>ביטוח בריאות</h2>
-    <p>כיסוי בריאותי מקיף הכולל טיפולים, השתלות, תרופות מחוץ לסל וכיסויים נוספים בהתאמה אישית. בריאותך בידיים טובות.</p>
-</section>
-
-<section id="life" class="service">
-    <h2>ביטוח חיים</h2>
-    <p>דואגים לעתיד המשפחה שלך עם ביטוח חיים שמעניק שקט נפשי לך וליקיריך.</p>
-</section>
-
-<section id="critical" class="service">
-    <h2>ביטוח מחלות קשות</h2>
-    <p>כולנו מקווים שנהיה תמיד בריאים, אבל לפעמים החיים מפתיעים. הכיסוי ייתן פיצוי כספי במצבים של מחלה קשה, כך שתוכלו להתמקד בהחלמה ללא דאגות כלכליות.</p>
+    <p>משפחתך ראויה לעתיד כלכלי בטוח ויציב...</p>
 </section>
 
 <section id="travel" class="service">
     <h2>ביטוח נסיעות לחו"ל</h2>
-    <p>המצרך הכי חשוב לחופשה שלכם – ביטוח נסיעות לחו"ל! דואגים לכם לכיסוי מקיף לכל מקרה בלתי צפוי, כולל טיפולים רפואיים, ביטולים, עיכובים ועוד.</p>
-    <p>לחצו עליי לרכישה וקבלו כיסוי מושלם לחופשה בראש שקט:</p>
-    <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//8cce2f89-6dab-469e-afba-f634ab64aa20.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" 
-            width="250" 
-            height="250" 
-            style="border:none;overflow:hidden" 
-            scrolling="no" 
-            frameborder="0" 
-            allowTransparency="true">
-    </iframe>
-</section>
-
-<section id="about" class="about">
-    <h2>קצת עלינו 😊</h2>
-    <p>אנו מציעים יותר מ-35 שנות ניסיון בשירות אמין ומסור, ורואים בכם חלק בלתי נפרד ממשפחתנו. כחברי לשכת סוכני הביטוח ובעלי רישיון פנסיוני מטעם משרד האוצר, אנו כאן להעניק לכם ליווי צמוד ופתרונות המותאמים אישית לצרכים הייחודיים שלכם.</p>
-</section>
-
-<section id="contact" class="contact">
-    <h2>צור קשר</h2>
-    <p>אבי בלאיש - סוכן ביטוח ופיננסים<br>בעל רישיון מטעם משרד האוצר<br>050-5212281<br><a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
-    <p>לירון בלאיש - סוכן ביטוח ופיננסים<br>בעל רישיון מטעם משרד האוצר<br>050-2835069<br><a href="mailto:liron@balaish.com">liron@balaish.com</a></p>
-    <a href="https://wa.me/0502835069" class="whatsapp">שלח הודעה בוואטסאפ</a>
+    <div class="iframe-container">
+        <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?..." 
+                scrolling="no" 
+                frameborder="0" 
+                allowTransparency="true"></iframe>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; כל הזכויות שמורות - אבי בלאיש - סוכן ביטוח ופיננסים</p>
+    <p>&copy; 2024 - אבי בלאיש</p>
 </footer>
 
 </body>
