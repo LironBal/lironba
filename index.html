@@ -11,116 +11,203 @@
             margin: 0;
             padding: 0;
             direction: rtl;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #e6f0ff;
+            color: #2a2a2a;
         }
 
+        /* כותרת ראשית */
         header {
-            background-color: #003366;
+            background-color: #336699;
             color: white;
+            padding: 20px 0;
             text-align: center;
-            padding: 15px 0;
-        }
-
-        header img {
-            max-width: 60px;
-            margin-bottom: 10px;
-        }
-
-        nav {
-            background-color: #00509e;
             display: flex;
             justify-content: center;
-            padding: 10px 0;
+            align-items: center;
+            gap: 10px;
         }
 
-        nav a {
+        .logo {
+            max-width: 50px;
+            height: auto;
+        }
+
+        /* תפריט עליון */
+        nav {
+            background-color: #4d88cc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .nav-links a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
             font-size: 1.1em;
-            transition: color 0.3s;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
 
-        nav a:hover {
-            color: #ffc107;
+        .nav-links a:hover {
+            background-color: #2e5a87;
         }
 
+        /* שירותים */
         section {
             padding: 20px;
         }
 
         .service, .about, .contact {
-            background: white;
+            background-color: #ffffff;
             margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 12px;
             max-width: 700px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover, .about:hover, .contact:hover {
+            transform: scale(1.02);
         }
 
         h2 {
-            color: #003366;
-            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: #336699;
+            margin-bottom: 5px;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #4d88cc;
+            margin: 8px auto 15px;
         }
 
         p {
+            font-size: 1.1em;
             line-height: 1.6;
+            color: #2a2a2a;
         }
 
-        a.whatsapp {
-            display: inline-block;
+        /* יצירת קשר */
+        .contact a {
+            color: #336699;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* כפתור וואטסאפ */
+        .whatsapp {
             background-color: #25d366;
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 15px 25px;
+            border-radius: 30px;
             text-decoration: none;
-            font-size: 1.1em;
-            margin-top: 10px;
+            display: inline-block;
+            margin: 20px 0;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
         }
 
-        a.whatsapp:hover {
-            background-color: #1ebe57;
+        .whatsapp:hover {
+            background-color: #1ebc59;
         }
 
-        iframe {
-            margin-top: 15px;
-            border: none;
-        }
-
+        /* תחתית הדף */
         footer {
-            background-color: #003366;
+            background-color: #336699;
             color: white;
+            padding: 15px;
             text-align: center;
-            padding: 10px 0;
             font-size: 0.9em;
+        }
+
+        /* עיצוב באנר חו"ל */
+        iframe {
+            margin-top: 20px;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        /* עיצוב למובייל */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links a {
+                padding: 5px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש">
-    <h1>אבי בלאיש - סוכן ביטוח ופיננסים</h1>
+    <img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש" class="logo">
+    אבי בלאיש - סוכן ביטוח
 </header>
 
 <nav>
-    <a href="#financial">ביטוח פיננסי</a>
-    <a href="#pension">ביטוח פנסיוני</a>
-    <a href="#health">ביטוח בריאות</a>
-    <a href="#life">ביטוח חיים</a>
-    <a href="#critical">ביטוח מחלות קשות</a>
-    <a href="#travel">ביטוח חו"ל</a>
-    <a href="#about">עלינו</a>
-    <a href="#contact">צור קשר</a>
+    <div class="nav-links">
+        <a href="#financial">ביטוח פיננסי</a>
+        <a href="#pension">ביטוח פנסיוני</a>
+        <a href="#health">ביטוח בריאות</a>
+        <a href="#life">ביטוח חיים</a>
+        <a href="#critical">ביטוח מחלות קשות</a>
+        <a href="#travel">ביטוח חו"ל</a>
+        <a href="#about">קצת עלינו 😊</a>
+        <a href="#contact">צור קשר</a>
+    </div>
 </nav>
+
+<section id="financial" class="service">
+    <h2>ביטוח פיננסי</h2>
+    <p>משפחתך ראויה לעתיד כלכלי בטוח ויציב. אנו מציעים מגוון רחב של תוכניות חסכון, המותאמות אישית להבטחת הביטחון הכלכלי שלך ושל משפחתך.</p>
+</section>
+
+<section id="pension" class="service">
+    <h2>ביטוח פנסיוני</h2>
+    <p>לא רק לגיל הפרישה - ביטוח פנסיוני עם כיסויים ביטוחיים לאובדן כושר עבודה, המגן עליך בכל שלב בחיים.</p>
+</section>
+
+<section id="health" class="service">
+    <h2>ביטוח בריאות</h2>
+    <p>כיסוי בריאותי מקיף הכולל טיפולים, השתלות, תרופות מחוץ לסל וכיסויים נוספים בהתאמה אישית. בריאותך בידיים טובות.</p>
+</section>
+
+<section id="life" class="service">
+    <h2>ביטוח חיים</h2>
+    <p>דואגים לעתיד המשפחה שלך עם ביטוח חיים שמעניק שקט נפשי לך וליקיריך.</p>
+</section>
+
+<section id="critical" class="service">
+    <h2>ביטוח מחלות קשות</h2>
+    <p>כולנו מקווים שנהיה תמיד בריאים, אבל לפעמים החיים מפתיעים. הכיסוי ייתן פיצוי כספי במצבים של מחלה קשה, כך שתוכלו להתמקד בהחלמה ללא דאגות כלכליות.</p>
+</section>
 
 <section id="travel" class="service">
     <h2>ביטוח נסיעות לחו"ל</h2>
-    <p>המצרך הכי חשוב לחופשה שלכם! דואגים לכם לכיסוי למקרים בלתי צפויים, איבוד כבודה, טיפולים רפואיים, עיכובים ועוד.</p>
+    <p>המצרך הכי חשוב לחופשה שלכם – ביטוח נסיעות לחו"ל! דואגים לכם לכיסוי מקיף לכל מקרה בלתי צפוי, כולל טיפולים רפואיים, ביטולים, עיכובים ועוד.</p>
     <p>לחצו עליי לרכישה וקבלו כיסוי מושלם לחופשה בראש שקט:</p>
-    <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//59f9647d-c7a3-489d-bf11-aee461f27f8e.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" 
+    <iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//8cce2f89-6dab-469e-afba-f634ab64aa20.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" 
             width="250" 
             height="250" 
             style="border:none;overflow:hidden" 
@@ -130,15 +217,20 @@
     </iframe>
 </section>
 
+<section id="about" class="about">
+    <h2>קצת עלינו 😊</h2>
+    <p>אנו מציעים יותר מ-35 שנות ניסיון בשירות אמין ומסור, ורואים בכם חלק בלתי נפרד ממשפחתנו. כחברי לשכת סוכני הביטוח ובעלי רישיון פנסיוני מטעם משרד האוצר, אנו כאן להעניק לכם ליווי צמוד ופתרונות המותאמים אישית לצרכים הייחודיים שלכם.</p>
+</section>
+
 <section id="contact" class="contact">
     <h2>צור קשר</h2>
     <p>אבי בלאיש - סוכן ביטוח ופיננסים<br>בעל רישיון מטעם משרד האוצר<br>050-5212281<br><a href="mailto:avi@balaish.com">avi@balaish.com</a></p>
     <p>לירון בלאיש - סוכן ביטוח ופיננסים<br>בעל רישיון מטעם משרד האוצר<br>050-2835069<br><a href="mailto:liron@balaish.com">liron@balaish.com</a></p>
-    <a href="https://wa.me/0502835069" class="whatsapp">WhatsApp</a>
+    <a href="https://wa.me/0502835069" class="whatsapp">שלח הודעה בוואטסאפ</a>
 </section>
 
 <footer>
-    <p>&copy; 2024 כל הזכויות שמורות - אבי בלאיש</p>
+    <p>&copy; כל הזכויות שמורות - אבי בלאיש - סוכן ביטוח ופיננסים</p>
 </footer>
 
 </body>
