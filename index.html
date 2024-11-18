@@ -1,205 +1,2070 @@
-<!DOCTYPE html> 
-<html lang="he"> 
-<head> 
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<title>אבי בלאיש - סוכן ביטוח</title> 
-<style> 
-/* עיצוב כללי */ 
-body { 
-font-family: Arial, sans-serif; 
-margin: 0; 
-padding: 0; 
-direction: rtl; 
-background-color: #e6f0ff; 
-color: #2a2a2a; 
-} 
-/* כותרת ראשית */ 
-header { 
-background-color: #336699; 
-color: white; 
-padding: 20px 0; 
-text-align: center; 
-display: flex; 
-justify-content: center; 
-align-items: center; 
-gap: 10px; 
-} 
-.logo { 
-max-width: 50px; 
-height: auto; 
-} 
-/* תפריט עליון */ 
-nav { 
-background-color: #4d88cc; 
-padding: 10px; 
-text-align: center; 
-} 
-.nav-links { 
-display: flex; 
-flex-wrap: wrap; 
-justify-content: center; 
-gap: 10px; 
-} 
-.nav-links a { 
-color: white; 
-text-decoration: none; 
-font-size: 1.1em; 
-padding: 5px 10px; 
-border-radius: 5px; 
-transition: background-color 0.3s ease; 
-} 
-.nav-links a:hover { 
-background-color: #2e5a87; 
-} 
-/* שירותים */ 
-section { 
-padding: 20px; 
-} 
-.service, .about, .contact { 
-background-color: #ffffff; 
-margin: 20px auto; 
-padding: 30px; 
-border-radius: 12px; 
-max-width: 700px; 
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-text-align: center; 
-transition: transform 0.3s ease; 
-} 
-.service:hover, .about:hover, .contact:hover { 
-transform: scale(1.02); 
-} 
-h2 { 
-font-size: 1.8em; 
-color: #336699; 
-margin-bottom: 5px; 
-position: relative; 
-} 
-h2::after { 
-content: ''; 
-display: block; 
-width: 50px; 
-height: 3px; 
-background-color: #4d88cc; 
-margin: 8px auto 15px; 
-} 
-p { 
-font-size: 1.1em; 
-line-height: 1.6; 
-color: #2a2a2a; 
-} 
-/* יצירת קשר */ 
-.contact a { 
-color: #336699; 
-text-decoration: none; 
-font-weight: bold; 
-font-size: 1.1em; 
-} 
-/* כפתור וואטסאפ */ 
-.whatsapp { 
-background-color: #25d366; 
-color: white; 
-padding: 15px 25px; 
-border-radius: 30px; 
-text-decoration: none; 
-display: inline-block; 
-margin: 20px 0; 
-font-size: 1.2em; 
-transition: background-color 0.3s ease; 
-} 
-.whatsapp:hover { 
-background-color: #1ebc59; 
-} 
-/* תחתית הדף */ 
-footer { 
-background-color: #336699; 
-color: white; 
-padding: 15px; 
-text-align: center; 
-font-size: 0.9em; 
-} 
-/* עיצוב באנר חו"ל */ 
-iframe { 
-margin-top: 20px; 
-max-width: 100%; 
-border-radius: 8px; 
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
-} 
-/* עיצוב למובייל */ 
-@media (max-width: 768px) { 
-.nav-links { 
-flex-direction: row; 
-flex-wrap: wrap; 
-justify-content: center; 
-} 
-.nav-links a { 
-padding: 5px; 
-font-size: 0.9em; 
-} 
-} 
-</style> 
-</head> 
-<body> 
-<header> 
-<img src="https://scontent.fhfa1-1.fna.fbcdn.net/v/t39.30808-6/324577261_715155510046438_5398385710963858493_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NXworB4oic0Q7kNvgFI5Gdu&_nc_ht=scontent.fhfa1-1.fna&oh=00_AYBoq-llaTx3rwu9EgCwg5ONJrfpGyTl-9fmNZVwMVDyXg&oe=66DF546E" alt="לוגו אבי בלאיש" class="logo"> 
-אבי בלאיש - סוכן ביטוח 
-</header> 
-<nav> 
-<div class="nav-links"> 
-<a href="#financial">ביטוח פיננסי</a> 
-<a href="#pension">ביטוח פנסיוני</a> 
-<a href="#health">ביטוח בריאות</a> 
-<a href="#life">ביטוח חיים</a> 
-<a href="#critical">ביטוח מחלות קשות</a> 
-<a href="#travel">ביטוח חו"ל</a> 
-<a href="#about">קצת עלינו 😊</a> 
-<a href="#contact">צור קשר</a> 
-</div> 
-</nav> 
-<section id="financial" class="service"> 
-<h2>ביטוח פיננסי</h2> 
-<p>משפחתך ראויה לעתיד כלכלי בטוח ויציב. אנו מציעים מגוון רחב של תוכניות חסכון, המותאמות אישית להבטחת הביטחון הכלכלי שלך ושל משפחתך.</p> 
-</section> 
-<section id="pension" class="service"> 
-<h2>ביטוח פנסיוני</h2> 
-<p>לא רק לגיל הפרישה - ביטוח פנסיוני עם כיסויים ביטוחיים לאובדן כושר עבודה, המגן עליך בכל שלב בחיים.</p> 
-</section> 
-<section id="health" class="service"> 
-<h2>ביטוח בריאות</h2> 
-<p>כיסוי בריאותי מקיף הכולל טיפולים, השתלות, תרופות מחוץ לסל וכיסויים נוספים בהתאמה אישית. בריאותך בידיים טובות.</p> 
-</section> 
-<section id="life" class="service"> 
-<h2>ביטוח חיים</h2> 
-<p>דואגים לעתיד המשפחה שלך עם ביטוח חיים שמעניק שקט נפשי לך וליקיריך.</p> 
-</section> 
-<section id="critical" class="service"> 
-<h2>ביטוח מחלות קשות</h2> 
-<p>כולנו מקווים שנהיה תמיד בריאים, אבל לפעמים החיים מפתיעים. הכיסוי ייתן פיצוי כספי במצבים של מחלה קשה, כך שתוכלו להתמקד בהחלמה ללא דאגות כלכליות.</p> 
-</section> 
-<section id="travel" class="service"> 
-<h2>ביטוח נסיעות לחו"ל</h2> 
-<p>המצרך הכי חשוב לחופשה שלכם! דואגים לכם לכיסוי מקיף לכל מקרה בלתי צפוי, כולל טיפולים רפואיים, איבוד כבודה, עיכובים ועוד.</p> 
-<p>לחצו עליי לרכישה וקבלו כיסוי מושלם לחופשה בראש שקט:</p> 
-<iframe src="https://distributor.passportcard.co.il/plugins/affiliate?pathToImage=https://marketing.passportcard.co.il/media/BB/images//8cce2f89-6dab-469e-afba-f634ab64aa20.jpg&distributor=6114&agreement=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" 
-width="250" 
-height="250" 
-style="border:none;overflow:hidden" 
-scrolling="no" 
-frameborder="0" 
-allowTransparency="true"> 
-</iframe> 
-</section> 
-<section id="about" class="about"> 
-<h2>קצת עלינו 😊</h2> 
-<p>אנו מציעים יותר מ-35 שנות ניסיון בשירות אמין ומסור, ורואים בכם חלק בלתי נפרד ממשפחתנו. כחברי לשכת סוכני הביטוח ובעלי רישיון פנסיוני מטעם משרד האוצר, אנו כאן להעניק לכם ליווי צמוד ופתרונות המותאמים אישית לצרכים הייחודיים שלכם.</p> 
-</section> 
-<section id="contact" class="contact"> 
-<h2>צור קשר</h2> 
-<p>אבי בלאיש - סוכן ביטוח ופיננסים<br>בעל רישיון מטעם משרד האוצר<br>050-5212281<br><a href="mailto:avi@balaish.com">avi@balaish.com</a></p> 
-<p>לירון בלאיש - סוכן ביטוח ופיננסים<br>בעל רישיון מטעם משרד האוצר<br>050-2835069<br><a href="mailto:liron@balaish.com">liron@balaish.com</a></p> 
-    <a href="https://wa.me/0502835069" class="whatsapp">שלח הודעה בוואטסאפ</a>
-<footer> 
-<p>&copy; כל הזכויות שמורות - אבי בלאיש - סוכן ביטוח ופיננסים</p> 
-</footer> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אבי בלאיש - סוכן ביטוח | פתרונות פיננסיים</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dsoh3yteb/image/upload/v1731928515/324577261_715155510046438_5398385710963858493_n_gkmeoi.png">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2563eb;
+            --secondary: #64748b;
+            --accent: #22c55e;
+            --background: #f8fafc;
+            --text: #0f172a;
+            --card-bg: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Heebo', sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Progress Bar */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 2000;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Header Styles */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Navigation */
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--primary-light);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: rotate 240s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1000px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Service Sections */
+        .service-section {
+            padding: 6rem 2rem;
+            background: var(--background);
+            position: relative;
+        }
+
+        .service-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-hero {
+            position: relative;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 3rem;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .service-hero:hover {
+            transform: translateY(-5px);
+        }
+
+        /* הוספת אייקונים מעוצבים ברקע */
+        .service-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.1;
+            background-repeat: no-repeat;
+            background-position: 95% center, 5% center;
+            background-size: 150px;
+            z-index: 1;
+        }
+
+        /* אייקונים ספציפיים לכל סקשן */
+        #financial .service-hero::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.41 16.09V20h-2.67v-1.93c-1.71-.36-3.16-1.46-3.27-3.4h1.96c.1 1.05.82 1.87 2.65 1.87 1.96 0 2.4-.98 2.4-1.59 0-.83-.44-1.61-2.67-2.14-2.48-.6-4.18-1.62-4.18-3.67 0-1.72 1.39-2.84 3.11-3.21V4h2.67v1.95c1.86.45 2.79 1.86 2.85 3.39H14.3c-.05-1.11-.64-1.87-2.22-1.87-1.5 0-2.4.68-2.4 1.64 0 .84.65 1.39 2.67 1.91s4.18 1.39 4.18 3.91c-.01 1.83-1.38 2.83-3.12 3.16z'/%3E%3C/svg%3E"),
+                          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z'/%3E%3C/svg%3E");
+        }
+
+        #pension .service-hero::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.31-8.86c-1.77-.45-2.34-.94-2.34-1.67 0-.84.79-1.43 2.1-1.43 1.38 0 1.9.66 1.94 1.64h1.71c-.05-1.34-.87-2.57-2.49-2.97V5H10.9v1.69c-1.51.32-2.72 1.3-2.72 2.81 0 1.79 1.49 2.69 3.66 3.21 1.95.46 2.34 1.15 2.34 1.87 0 .53-.39 1.39-2.1 1.39-1.6 0-2.23-.72-2.32-1.64H8.04c.1 1.7 1.36 2.66 2.86 2.97V19h2.34v-1.67c1.52-.29 2.72-1.16 2.73-2.77-.01-2.2-1.9-2.96-3.66-3.42z'/%3E%3C/svg%3E");
+        }
+
+        #health .service-hero::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z'/%3E%3C/svg%3E");
+        }
+
+        #life .service-hero::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z'/%3E%3C/svg%3E");
+        }
+
+        #critical .service-hero::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z'/%3E%3C/svg%3E");
+        }
+
+        #travel .service-hero::after {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3E%3Cpath d='M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z'/%3E%3C/svg%3E");
+        }
+
+        /* אנימציה לאייקונים */
+        .service-hero:hover::after {
+            opacity: 0.15;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 0, 0, 0.3),
+                rgba(0, 0, 0, 0.7)
+            );
+            z-index: 1;
+        }
+
+        .service-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .service-tag {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .service-hero-content h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .service-hero {
+                height: 300px;
+            }
+
+            .service-hero-content h2 {
+                font-size: 2rem;
+            }
+
+            .service-hero-content p {
+                font-size: 1rem;
+            }
+
+            .service-tag {
+                font-size: 0.9rem;
+                padding: 0.4rem 1.2rem;
+            }
+        }
+
+        /* Service Features */
+        .service-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Benefits List */
+        .benefits-list {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .benefits-list li {
+            margin-bottom: 1rem;
+            padding-right: 2rem;
+            position: relative;
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            color: var(--accent);
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--background);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin: 1rem;
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .service-hero {
+                height: 300px;
+            }
+
+            .service-features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .animate-fadeIn {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .animate-slideIn {
+            animation: slideIn 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1731928515/324577261_715155510046438_5398385710963858493_n_gkmeoi.png" alt="לוגו אבי בלאיש" class="logo">
+                <h1 class="company-name">אבי בלאיש</h1>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#financial" class="nav-link">ביטוח פיננסי</a>
+                <a href="#pension" class="nav-link">ביטוח פנסיוני</a>
+                <a href="#health" class="nav-link">ביטוח בריאות</a>
+                <a href="#life" class="nav-link">ביטוח חיים</a>
+                <a href="#critical" class="nav-link">מחלות קשות</a>
+                <a href="#travel" class="nav-link">ביטוח נסיעות לחו"ל</a>
+                <a href="#contact" class="nav-link contact-btn">צור קשר</a>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-aos="fade-up" class="hero-title">הביטחון הכלכלי שלך מתחיל כאן</h1>
+            <p data-aos="fade-up" data-aos-delay="200" class="hero-subtitle">
+                למעלה מ-35 שנות ניסיון בליווי משפחות לעתיד כלכלי בטוח ומוצלח
+            </p>
+            <div data-aos="fade-up" data-aos-delay="400" class="hero-buttons">
+                <a href="#contact" class="primary-btn">
+                    <i class="fas fa-phone-alt"></i>
+                    דברו איתנו עכשיו
+                </a>
+                <a href="#services" class="secondary-btn">
+                    <i class="fas fa-info-circle"></i>
+                    גלה עוד על השירותים שלנו
+                </a>
+            </div>
+            
+            <!-- Hero Features -->
+            <div class="hero-features" data-aos="fade-up" data-aos-delay="600">
+                <div class="hero-feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>מקצועיות ואמינות</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>שירות אישי ומסור</span>
+                </div>
+                <div class="hero-feature">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>ליווי לאורך כל הדרך</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Contact Button -->
+        <a href="https://wa.me/972502835069" class="floating-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </section>
+
+    
+
+    <!-- Why Choose Us Timeline Section -->
+    <section class="why-choose-us-timeline">
+        <div class="section-container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">למה לבחור בנו?</h2>
+                <p class="section-subtitle">למעלה מ-35 שנות ניסיון בליווי אלפי לקוחות מרוצים</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-track">
+                    <div class="timeline-item" data-aos="fade-up">
+                        <div class="timeline-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h4>ליווי אישי צמוד</h4>
+                        <p>מלווים אותך באופן אישי וקצועי לאורך כל הדרך</p>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="timeline-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h4>התאמה מדויקת</h4>
+                        <p>התאמה מדויקת לצרכים האישיים שלך</p>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="timeline-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h4>שקיפות מלאה</h4>
+                        <p>שקיפות מלאה לאורך כל התהליך</p>
+                    </div>
+
+                    <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="timeline-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>עדכונים שוטפים</h4>
+                        <p>מעקב ועדכונים שוטפים על ביצועי התיק</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    .why-choose-us-timeline {
+        padding: 6rem 2rem;
+        background: linear-gradient(to bottom, #f8fafc, #ffffff);
+    }
+
+    .section-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+        font-weight: 700;
+    }
+
+    .section-subtitle {
+        font-size: 1.2rem;
+        color: var(--secondary);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .timeline-container {
+        overflow-x: hidden;
+        padding: 2rem 0;
+    }
+
+    .timeline-track {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        padding: 2rem 0;
+    }
+
+    .timeline-track::before {
+        content: '';
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--primary-light);
+        opacity: 0.2;
+    }
+
+    .timeline-item {
+        flex: 1;
+        text-align: center;
+        padding: 0 1rem;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover {
+        transform: translateY(-10px);
+    }
+
+    .timeline-icon {
+        width: 80px;
+        height: 80px;
+        background: var(--primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        font-size: 2rem;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.2);
+        transition: all 0.3s ease;
+        position: relative;
+        z-index: 1;
+    }
+
+    .timeline-item:hover .timeline-icon {
+        background: var(--primary-light);
+        transform: scale(1.1);
+    }
+
+    .timeline-item h4 {
+        color: var(--primary);
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+    }
+
+    .timeline-item p {
+        color: var(--secondary);
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 968px) {
+        .timeline-track {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .timeline-track::before {
+            display: none;
+        }
+
+        .timeline-item {
+            flex: 0 0 calc(50% - 2rem);
+        }
+    }
+
+    @media (max-width: 576px) {
+        .timeline-item {
+            flex: 0 0 100%;
+        }
+
+        .section-title {
+            font-size: 2rem;
+        }
+    }
+    </style>
+
+    <style>
+        /* Additional Styles for Part 2 */
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .primary-btn, .secondary-btn {
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .primary-btn {
+            background: var(--accent);
+            color: white;
+        }
+
+        .secondary-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+
+        .primary-btn:hover, .secondary-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-features {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 2rem;
+            left: 2rem;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        .stats-section {
+            background: white;
+            padding: 4rem 2rem;
+        }
+
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-item i {
+            font-size: 2.5rem;
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--secondary);
+            font-size: 1.1rem;
+        }
+
+        .trust-badges {
+            background: var(--background);
+            padding: 3rem 2rem;
+        }
+
+        .trust-badges-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            text-align: center;
+        }
+
+        .trust-badge img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin: 2rem auto;
+            }
+
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+    <!-- ביטוח פיננסי -->
+    <section id="financial" class="service-section">
+        <div class="service-container">
+            <div class="service-hero" style="background: linear-gradient(135deg, #1a365d, #2563eb);">
+                <div class="service-hero-content">
+                    <span class="service-tag" data-aos="fade-up">ביטוח פיננסי</span>
+                    <h2 data-aos="fade-up">תכנון פיננסי חכם למשפחה שלך</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">בניית תיק השקעות מותאם אישית לצרכים והמטרות שלך</p>
+                </div>
+            </div>
+
+            <div class="service-features">
+                <div class="feature-card" data-aos="fade-up">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>קופות גמל להשקעה</h3>
+                    <ul class="benefits-list">
+                        <li>אפשרות למשיכת הכסף בכל עת</li>
+                        <li>פטור ממס רווחי הון במשיכה כקצבה</li>
+                        <li>מגוון מסלולי השקעה</li>
+                        <li>הפקדה של עד 79,000 ש"ח בשנה</li>
+                        <li>ניהול השקעות מקצועי</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-piggy-bank feature-icon"></i>
+                    <h3>חיסכון לכל מטרה</h3>
+                    <ul class="benefits-list">
+                        <li>תכניות חיסכון גמישות</li>
+                        <li>אפשרויות השקעה מגוונות</li>
+                        <li>התאמה אישית למטרות שלך</li>
+                        <li>ניהול סיכונים מקצועי</li>
+                        <li>מעקב ועדכון שוטף</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-hand-holding-usd feature-icon"></i>
+                    <h3>תכנון פרישה</h3>
+                    <ul class="benefits-list">
+                        <li>בניית תיק פנסיוני מאוזן</li>
+                        <li>מקסום הטבות מס</li>
+                        <li>תכנון הוצאות והכנסות</li>
+                        <li>התאמת מסלולי השקעה</li>
+                        <li>ייעוץ מתמשך</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="service-details">
+                <div class="details-grid">
+                    <div class="pension-process" data-aos="fade-up">
+                        
+
+                    <div class="pension-process" data-aos="fade-up" data-aos-delay="200">
+                        <h3 class="process-title">תהליך העבודה שלנו</h3>
+                        
+                        <div class="progress-steps">
+                            <div class="progress-step active">
+                                <div class="step-number">1</div>
+                                <div class="step-info">
+                                    <h4>פגישת היכרות</h4>
+                                    <p>נפגש להבנת הצרכים והמטרות הפיננסיות שלך</p>
+                                </div>
+                                <div class="progress-line">
+                                    <div class="progress-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-step">
+                                <div class="step-number">2</div>
+                                <div class="step-info">
+                                    <h4>ניתוח מצב קיים</h4>
+                                    <p>סקירה מקיפה של המוצרים הפנסיוניים הקיימים</p>
+                                </div>
+                                <div class="progress-line">
+                                    <div class="progress-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-step">
+                                <div class="step-number">3</div>
+                                <div class="step-info">
+                                    <h4>בניית תכנית</h4>
+                                    <p>התאמת פתרונות פיננסיים מותאמים אישית</p>
+                                </div>
+                                <div class="progress-line">
+                                    <div class="progress-dot"></div>
+                                </div>
+                            </div>
+
+                            <div class="progress-step">
+                                <div class="step-number">4</div>
+                                <div class="step-info">
+                                    <h4>ליווי מתמשך</h4>
+                                    <p>עדכונים ומעקב שוטף אחר ביצועי התיק</p>
+                                </div>
+                                <div class="progress-line">
+                                    <div class="progress-dot"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    .details-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* שינוי ל-2 עמודות */
+        gap: 2rem;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .pension-process {
+        padding: 1rem; /* הקטנת הפדינג */
+        background: #f8fafc;
+        border-radius: 1rem;
+    }
+
+    /* התאמה למובייל */
+    @media (max-width: 968px) {
+        .details-grid {
+            grid-template-columns: 1fr; /* במובייל - עמודה אחת */
+            gap: 1rem;
+        }
+    }
+
+    /* שאר הסגנונות נשארים אותו דבר */
+    </style>
+
+    <!-- ביטוח פנסיוני -->
+    <section id="pension" class="service-section">
+        <div class="service-container">
+            <div class="service-hero" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+                <div class="service-hero-content">
+                    <span class="service-tag" data-aos="fade-up">ביטוח פנסיוני</span>
+                    <h2 data-aos="fade-up">הבטחת העתיד הכלכלי שלך</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">תכנון פנסיוני מקיף עם כיסויים מותאמים אישית</p>
+                </div>
+            </div>
+
+            <div class="service-features">
+                <div class="feature-card" data-aos="fade-up">
+                    <i class="fas fa-umbrella feature-icon"></i>
+                    <h3>קרן פנסיה</h3>
+                    <ul class="benefits-list">
+                        <li>כיסוי לפנסיית זקנה</li>
+                        <li>כיסוי למקרה נכות</li>
+                        <li>כיסוי למקרה פטירה</li>
+                        <li>דמי ניהול תחרותיים</li>
+                        <li>מסלולי השקעה מגווני</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-user-shield feature-icon"></i>
+                    <h3>ביטוח מנהלים</h3>
+                    <ul class="benefits-list">
+                        <li>גמישות בבחירת מסלולים</li>
+                        <li>אפשרות להגדלת כיסויים</li>
+                        <li>קביעת מוטבים גמישה</li>
+                        <li>תנאי פדיון משופרים</li>
+                        <li>התאמה אישית של הכיסויים</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-wheelchair feature-icon"></i>
+                    <h3>אובדן כושר עבודה</h3>
+                    <ul class="benefits-list">
+                        <li>פיצוי חודשי במקרה של אובדן כושר עבודה</li>
+                        <li>שחרור מתשלום פרמיות</li>
+                        <li>הרחבות מקצועיות</li>
+                        <li>כיסוי עד גיל פרישה</li>
+                        <li>אפשרות לקיזוז מול ביטוח לאומי</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pension-process">
+                <h3 class="process-title">התהליך הפנסיוני שלנו</h3>
+                
+                <div class="progress-steps">
+                    <div class="progress-step active">
+                        <div class="step-number">1</div>
+                        <div class="step-info">
+                            <h4>פגישת היכרות</h4>
+                            <p>הבנת הצרכים והמטרות שלך</p>
+                        </div>
+                        <div class="progress-line">
+                            <div class="progress-dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-step">
+                        <div class="step-number">2</div>
+                        <div class="step-info">
+                            <h4>ניתוח מצב קיים</h4>
+                            <p>בדיקת המוצרים הפנסיוניים הקיימים</p>
+                        </div>
+                        <div class="progress-line">
+                            <div class="progress-dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-step">
+                        <div class="step-number">3</div>
+                        <div class="step-info">
+                            <h4>בניית תכנית</h4>
+                            <p>התאמת פתרונות אישיים</p>
+                        </div>
+                        <div class="progress-line">
+                            <div class="progress-dot"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress-step">
+                        <div class="step-number">4</div>
+                        <div class="step-info">
+                            <h4>ליווי מתמשך</h4>
+                            <p>מעקב ועדכון שוטף</p>
+                        </div>
+                        <div class="progress-line">
+                            <div class="progress-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <style>
+                .pension-process {
+                    padding: 4rem 2rem;
+                    background: #f8fafc;
+                    border-radius: 1rem;
+                }
+
+                .progress-steps {
+                    max-width: 1000px;
+                    margin: 3rem auto;
+                    position: relative;
+                }
+
+                .progress-step {
+                    display: flex;
+                    align-items: flex-start;
+                    position: relative;
+                    margin-bottom: 2rem;
+                }
+
+                .step-number {
+                    width: 40px;
+                    height: 40px;
+                    background: #2563eb;
+                    color: white;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: bold;
+                    margin-left: 1rem;
+                }
+
+                .step-info {
+                    flex: 1;
+                    background: white;
+                    padding: 1.5rem;
+                    border-radius: 0.8rem;
+                    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                }
+
+                .step-info h4 {
+                    color: #2563eb;
+                    margin: 0 0 0.5rem 0;
+                }
+
+                .step-info p {
+                    margin: 0;
+                    color: #64748b;
+                }
+
+                .progress-line {
+                    position: absolute;
+                    right: 20px;
+                    top: 40px;
+                    bottom: -40px;
+                    width: 2px;
+                    background: #e2e8f0;
+                }
+
+                .progress-dot {
+                    position: absolute;
+                    top: 0;
+                    right: -4px;
+                    width: 10px;
+                    height: 10px;
+                    background: #2563eb;
+                    border-radius: 50%;
+                }
+
+                .progress-step:last-child .progress-line {
+                    display: none;
+                }
+
+                .progress-step.active .step-number,
+                .progress-step.active .progress-dot {
+                    background: #2563eb;
+                }
+
+                @media (max-width: 768px) {
+                    .progress-steps {
+                        padding-right: 2rem;
+                    }
+
+                    .step-info {
+                        padding: 1rem;
+                    }
+                }
+            </style>
+        
+        </div>
+    </section>
+
+    <!-- ביטוח בריאות -->
+    <section id="health" class="service-section">
+        <div class="service-container">
+            <div class="service-hero" style="background: linear-gradient(135deg, #065f46, #10b981);">
+                <div class="service-hero-content">
+                    <span class="service-tag" data-aos="fade-up">ביטוח בריאות</span>
+                    <h2 data-aos="fade-up">הגנה מקיפה על הבריאות שלך</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">כיסוי רפואי מקיף למגוון טיפולים והתייעצויות</p>
+                </div>
+            </div>
+
+            <div class="service-features">
+                <div class="feature-card" data-aos="fade-up">
+                    <i class="fas fa-hospital-user feature-icon"></i>
+                    <h3>ניתוחים והשתלות</h3>
+                    <ul class="benefits-list">
+                        <li>כיסוי לניתוחים פרטיים בארץ</li>
+                        <li>ניתוחים בחו"ל</li>
+                        <li>השתלות איברים</li>
+                        <li>טיפולים מיוחדים בחו"ל</li>
+                        <li>תרופות שאינן בסל הבריאות</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-stethoscope feature-icon"></i>
+                    <h3>רפואה משלימה</h3>
+                    <ul class="benefits-list">
+                        <li>טיפולים אלטרנטיביים</li>
+                        <li>רפואה משלימה</li>
+                        <li>התייעצויות עם מומחים</li>
+                        <li>בדיקות אבחנתיות</li>
+                        <li>רפואה מונעת</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-pills feature-icon"></i>
+                    <h3>תרופות מיוחדות</h3>
+                    <ul class="benefits-list">
+                        <li>תרופות שאינן בסל הבריאות</li>
+                        <li>תרופות בהתאמה אישית</li>
+                        <li>טיפולים ביולוגיים</li>
+                        <li>תרופות לפי מרשם</li>
+                        <li>ייעוץ רוקחי</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ביטוח נסיעות לחו"ל -->
+    <section id="travel" class="service-section">
+        <div class="service-container">
+            <div class="video-container">
+                <video autoplay muted loop playsinline class="background-video">
+                    <source src="https://www.passportcard.co.il/wp-content/uploads/2023/11/passportcard-home-vid.mp4" type="video/mp4">
+                </video>
+                <div class="video-overlay">
+                    <h2>ביטוח נסיעות לחו״ל</h2>
+                    <p>הביטוח המשתלם והמקיף ביותר לנסיעות לחו״ל</p>
+                    <a href="https://buy.passportcard.co.il/existing?AffiliateId=sEi6FMfl2PxmYvf19iyl7Q%3D%3D" class="buy-policy-btn">
+                        <span>לרכישת פוליסה</span>
+                        <i class="fas fa-plane-departure"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="service-features">
+            <div class="feature-card" data-aos="fade-up">
+                <i class="fas fa-umbrella feature-icon"></i>
+                <h3>כיסוי רפואי מקיף</h3>
+                <ul class="benefits-list">
+                    <li>הוצאות רפואיות בחו"ל</li>
+                    <li>פינוי והטסה רפואית</li>
+                    <li>טיפול חירום בשיניים</li>
+                    <li>החמרה של מצב רפואי קיים</li>
+                    <li>תאונות אישיות</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-suitcase feature-icon"></i>
+                <h3>כיסוי לנזקי רכוש</h3>
+                <ul class="benefits-list">
+                    <li>אובדן או גניבת כבודה</li>
+                    <li>מטען מאחר או אובד</li>
+                    <li>מסמכים מזהים</li>
+                    <li>ציוד אלקטרוני</li>
+                    <li>כיסוי לציוד ספורט</li>
+                </ul>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <i class="fas fa-plane-departure feature-icon"></i>
+                <h3>הרחבות מיוחדות</h3>
+                <ul class="benefits-list">
+                    <li>ביטול או קיצור נסיעה</li>
+                    <li>ספורט אתגרי וחורף</li>
+                    <li>הריון עד שבוע 32</li>
+                    <li>השכרת רכב</li>
+                    <li>מחשבים ומכשירים ניידים</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <style>
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+    }
+
+    .background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .video-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .video-overlay h2 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .video-overlay p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    }
+
+    .buy-policy-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #2563eb;
+        color: white;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid white;
+    }
+
+    .buy-policy-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        background: #1d4ed8;
+    }
+
+    @media (max-width: 768px) {
+        .video-container {
+            height: 400px;
+        }
+
+        .video-overlay h2 {
+            font-size: 2rem;
+        }
+
+        .video-overlay p {
+            font-size: 1.2rem;
+        }
+
+        .buy-policy-btn {
+            padding: 12px 25px;
+            font-size: 1rem;
+        }
+    }
+    </style>
+
+    <!-- ביטוח חיים -->
+    <section id="life" class="service-section">
+        <div class="service-container">
+            <div class="service-hero" style="background: linear-gradient(135deg, #4a5568, #718096);">
+                <div class="service-hero-content">
+                    <span class="service-tag" data-aos="fade-up">ביטוח חיים</span>
+                    <h2 data-aos="fade-up">הגנה על העתיד של המשפחה שלך</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">ביטחון כלכלי למשפחה בכל מצב</p>
+                </div>
+            </div>
+
+            <div class="service-features">
+                <div class="feature-card" data-aos="fade-up">
+                    <i class="fas fa-heart feature-icon"></i>
+                    <h3>ריסק למקרה פטירה</h3>
+                    <ul class="benefits-list">
+                        <li>סכום ביטוח גבוה</li>
+                        <li>פרמיה נמוכה יחסית</li>
+                        <li>גמישות בבחירת סכום הביטוח</li>
+                        <li>אפשרות להגדלת הכיסוי</li>
+                        <li>תשלום מיידי למוטבים</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-coins feature-icon"></i>
+                    <h3>משכנתא ומימון</h3>
+                    <ul class="benefits-list">
+                        <li>כיסוי להלוואת משכנתא</li>
+                        <li>הגנה על הנכס המשפחתי</li>
+                        <li>התאמה למסלול ההלוואה</li>
+                        <li>הפחתת סכום הביטוח בהתאם ליתרה</li>
+                        <li>מחיר אטרקטיבי</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-child feature-icon"></i>
+                    <h3>הגנה למשפחה</h3>
+                    <ul class="benefits-list">
+                        <li>הבטחת רמת חיים למשפחה</li>
+                        <li>כיסוי הוצאות חינוך</li>
+                        <li>המשך תשלומי משכנתא</li>
+                        <li>שמירה על איכות חיים</li>
+                        <li>תמיכה בהוצאות שוטפות</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <!-- ביטוח מחלות קשות -->
+    <section id="critical" class="service-section">
+        <div class="service-container">
+            <div class="service-hero" style="background: linear-gradient(135deg, #9f1239, #dc2626);">
+                <div class="service-hero-content">
+                    <span class="service-tag" data-aos="fade-up">ביטוח מחלות קשות</span>
+                    <h2 data-aos="fade-up">תמיכה כלכלית ברגעים הקשים</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">פיצוי כספי המאפשר התמקדות בהחלמה</p>
+                </div>
+            </div>
+
+            <div class="service-features">
+                <div class="feature-card" data-aos="fade-up">
+                    <i class="fas fa-file-medical feature-icon"></i>
+                    <h3>כיסוי מקיף</h3>
+                    <ul class="benefits-list">
+                        <li>למעלה מ-30 מחלות שות</li>
+                        <li>סרטן לסוגיו</li>
+                        <li>התקף לב</li>
+                        <li>שבץ מוחי</li>
+                        <li>מחלות נוספות</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-hand-holding-heart feature-icon"></i>
+                    <h3>יתרונות הכיסוי</h3>
+                    <ul class="benefits-list">
+                        <li>פיצוי כספי חד פעמי</li>
+                        <li>ללא תלות בהוצאות בפועל</li>
+                        <li>שימוש חופשי בכסף</li>
+                        <li>פיצוי גם במקרה של החלמה</li>
+                        <li>ללא צורך בקבלות</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fas fa-user-md feature-icon"></i>
+                    <h3>שירותים נלווים</h3>
+                    <ul class="benefits-list">
+                        <li>התייעצות עם רופאים מומחים</li>
+                        <li>ליווי רפואי אישי</li>
+                        <li>בדיקות מנע תקופתיות</li>
+                        <li>שירותי רפואה משלימה</li>
+                        <li>תמיכה נפשית</li>
+                    </ul>
+                </div>
+            </div>
+
+            
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="service-container">
+            <div class="contact-hero" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+                <div class="service-hero-content">
+                    <span class="service-tag" data-aos="fade-up">צור קשר</span>
+                    <h2 data-aos="fade-up">נשמח לעמוד לשירותכם</h2>
+                    <p data-aos="fade-up" data-aos-delay="200">צוות המומחים שלנו כאן בשבילכם</p>
+                </div>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Information Cards -->
+                <div class="contact-info-container" data-aos="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <i class="fas fa-user-tie"></i>
+                            <h3>אבי בלאיש</h3>
+                            <p>סוכן ביטוח ופיננסים מורשה</p>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:0505212281" dir="ltr">050-5212281</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:avi@balaish.com">avi@balaish.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-header">
+                            <i class="fas fa-user-tie"></i>
+                            <h3>לירון בלאיש</h3>
+                            <p>סוכן ביטוח ופיננסים מורשה</p>
+                        </div>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <a href="tel:0502835069" dir="ltr">050-2835069</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:liron@balaish.com">liron@balaish.com</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://wa.me/972502835069" class="social-btn whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            שלח הודעת וואטסאפ
+                        </a>
+                        <a href="https://www.facebook.com/p/%D7%90%D7%91%D7%99-%D7%91%D7%9C%D7%90%D7%99%D7%A9-%D7%A1%D7%95%D7%9B%D7%9F-%D7%91%D7%99%D7%98%D7%95%D7%97-%D7%95%D7%A4%D7%99%D7%A0%D7%A0%D7%A1%D7%99%D7%99%D7%9D-100054436781748/?_rdr" class="social-btn facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                            עקבו אחרינו בפייסבוק
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form id="contactForm" class="contact-form" action="mailto:liron@balaish.com" method="post">
+                        <h3>השאירו פרטים ונחזור אליכם</h3>
+                        <div class="form-group">
+                            <label for="name">שם מלא</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">טלפון</label>
+                            <input type="tel" id="phone" name="phone" required dir="ltr">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">אימייל</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">נושא הפנייה</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">בחר נושא</option>
+                                <option value="financial">ביטוח פיננסי</option>
+                                <option value="pension">ביטוח פנסיוני</option>
+                                <option value="health">ביטוח בריאות</option>
+                                <option value="life">ביטוח חיים</option>
+                                <option value="critical">ביטוח מחלות קשות</option>
+                                <option value="travel">ביטוח נסיעות לחו"ל</option>
+                                <option value="other">אחר</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">תוכן ההודעה</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i>
+                            שליחה
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>ניווט מהיר</h4>
+                    <nav class="footer-nav">
+                        <a href="#financial">ביטוח פיננסי</a>
+                        <a href="#pension">ביטוח פנסיוני</a>
+                        <a href="#health">ביטוח בריאות</a>
+                        <a href="#life">ביטוח חיים</a>
+                        <a href="#critical">ביטוח מחלות קשות</a>
+                        <a href="#travel">ביטוח נסיעות לחו"ל</a>
+                    </nav>
+                </div>
+                <div class="footer-column">
+                    <h4>שעות פעילות</h4>
+                    <ul class="hours-list">
+                        <li>ראשון - חמישי: 09:00 - 19:00</li>
+                        <li>שישי: 09:00 - 13:00</li>
+                        <li>שבת: סגור</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>צור קשר</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 050-5212281</p>
+                        <p><i class="fas fa-envelope"></i> avi@balaish.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 כל הזכויות שמורות - אבי בלאיש סוכנות לביטוח</p>
+                <div class="footer-credit">
+                    <span>נבנה על ידי Triroars</span>
+                    <img src="https://res.cloudinary.com/dsoh3yteb/image/upload/v1725992512/NewLogo_BLANK-RecoveredW_vng9xh.png" 
+                         alt="Triroars Logo" 
+                         class="footer-logo">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        /* Contact Section Styles */
+        .contact-section {
+            background-color: var(--background);
+            padding: 6rem 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            padding: 2rem;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-header i {
+            font-size: 3rem;
+            color: var(--primary-light);
+            margin-bottom: 1rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-item a {
+            color: var(--text);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-light);
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .whatsapp {
+            background: #25D366;
+        }
+
+        .facebook {
+            background: #1877F2;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-light);
+            outline: none;
+        }
+
+        .submit-btn {
+            background: var(--primary-light);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: var(--primary);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background: var(--primary);
+            color: white;
+            padding: 4rem 2rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-column h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .footer-column h4::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 2px;
+            background: var(--accent);
+            margin-top: 0.5rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            opacity: 1;
+        }
+
+        .hours-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .hours-list li {
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 2rem;
+            text-align: center;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .footer-credit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Progress Bar
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+        };
+
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+// Smooth Scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form Validation and Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic form validation
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !phone || !email || !subject || !message) {
+                alert('נא למלא את כל השדות');
+                return;
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('נא להזין כתובת אימייל תקינה');
+                return;
+            }
+
+            // Phone validation - Israeli phone number format
+            const phoneRegex = /^((\+972|972)|0)( |-)?([1-468-9]( |-)?\d{7}|(5|7)[0-9]( |-)?\d{7})$/;
+            if (!phoneRegex.test(phone)) {
+                alert('נא להזין מספר טלפון תקין');
+                return;
+            }
+
+            // Here you would typically send the form data to your server
+            // For demo purposes, we'll just show a success message
+            alert('תודה על פנייתך! נציג יחזור אליך בהקדם');
+            this.reset();
+        });
+
+        // Pension Calculator
+        const calculatePension = () => {
+            const age = parseInt(document.getElementById('age').value);
+            const salary = parseInt(document.getElementById('salary').value);
+            
+            if (isNaN(age) || isNaN(salary)) {
+                alert('נא להזין מספרים תקינים');
+                return;
+            }
+
+            if (age < 18 || age > 67) {
+                alert('נא להזין גיל בין 18 ל-67');
+                return;
+            }
+
+            // Simple pension calculation (this is just an example)
+            const yearsUntilRetirement = 67 - age;
+            const monthlyDeposit = salary * 0.185; // 18.5% of salary
+            const estimatedReturn = 0.04; // 4% annual return
+            
+            let totalSavings = 0;
+            for (let i = 0; i < yearsUntilRetirement; i++) {
+                totalSavings = (totalSavings + monthlyDeposit * 12) * (1 + estimatedReturn);
+            }
+
+            const monthlyPension = totalSavings / (20 * 12); // Assuming 20 years of pension
+
+            const resultElement = document.getElementById('calculation-result');
+            resultElement.innerHTML = `
+                <h4>תוצאת החישוב</h4>
+                <p>קצבה חודשית משוערת: ₪${Math.round(monthlyPension).toLocaleString()}</p>
+                <p>סכום צבירה משוער: ₪${Math.round(totalSavings).toLocaleString()}</p>
+                <small>* החישוב הוא הערכה בלבד ואינו מהווה התחייבות</small>
+            `;
+        };
+
+        // Life Insurance Calculator
+        const calculateLifeInsurance = () => {
+            const age = parseInt(document.getElementById('lifeAge').value);
+            const amount = parseInt(document.getElementById('insuranceAmount').value);
+            
+            if (isNaN(age) || isNaN(amount)) {
+                alert('נא להזין מספרים תקינים');
+                return;
+            }
+
+            if (age < 18 || age > 75) {
+                alert('נא להזין גיל בין 18 ל-75');
+                return;
+            }
+
+            // Simple premium calculation (this is just an example)
+            let basePremium = amount / 1000 * 1.5;
+            let ageFactor = 1 + (age - 18) / 100;
+            let monthlyPremium = basePremium * ageFactor;
+
+            const resultElement = document.getElementById('life-calculation-result');
+            resultElement.innerHTML = `
+                <h4>הערכת פרמיה חודשית</h4>
+                <p>₪${Math.round(monthlyPremium).toLocaleString()}</p>
+                <small>* המחיר הוא הערכה בלבד ואינו מהווה הצעת מחיר מחייבת</small>
+            `;
+        };
+
+        // Add calculator button event listeners
+        document.querySelectorAll('.calculate-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.closest('form').id === 'pensionCalculator') {
+                    calculatePension();
+                } else if (this.closest('form').id === 'lifeCalculator') {
+                    calculateLifeInsurance();
+                }
+            });
+        });
+
+        // Floating WhatsApp button visibility
+        window.addEventListener('scroll', function() {
+            const floatingBtn = document.querySelector('.floating-whatsapp');
+            if (window.scrollY > 300) {
+                floatingBtn.style.opacity = '1';
+                floatingBtn.style.transform = 'translateY(0)';
+            } else {
+                floatingBtn.style.opacity = '0';
+                floatingBtn.style.transform = 'translateY(20px)';
+            }
+        });
+
+        // Add loading animation for PassportCard iframe
+        const travelIframe = document.querySelector('.travel-purchase-section iframe');
+        if (travelIframe) {
+            travelIframe.addEventListener('load', function() {
+                this.style.opacity = '1';
+            });
+        }
+
+        // Lazy load images
+        document.addEventListener('DOMContentLoaded', function() {
+            const lazyImages = document.querySelectorAll('img[data-src]');
+            
+            const imageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        observer.unobserve(img);
+                    }
+                });
+            });
+
+            lazyImages.forEach(function(img) {
+                imageObserver.observe(img);
+            });
+        });
+
+    </script>
+</body>
+</html>        
